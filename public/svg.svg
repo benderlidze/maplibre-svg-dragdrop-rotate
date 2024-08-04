@@ -1,0 +1,238 @@
+<svg width="4330" height="1129.9999899999993" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_47">
+   <rect id="svg_48" fill="#84545f" y="185" x="0" height="930" width="4330"/>
+   <rect id="svg_49" fill="none" stroke="black" stroke-width="30" y="200" x="15" height="930" width="4300"/>
+   <g id="svg_1">
+    <svg id="svg_50" fill="none" viewBox="0 0 1060 915" height="915" width="1060">
+     <rect id="svg_51" fill="#CD934D" transform="matrix(1 0 0 -1 30 900)" height="700" width="1000"/>
+     <path id="svg_52" stroke-width="30" stroke="black" d="m762,900l-747,0c0,0 0,-426.633 0,-700l60.5119,0"/>
+     <path id="svg_53" stroke-width="30" stroke="black" d="m403,200l45.5,0l45.5,0"/>
+     <path id="svg_54" stroke-width="30" stroke="black" d="m698,200l45.5,0l45.5,0"/>
+     <path id="svg_55" stroke-width="30" stroke="black" d="m865,900l180,0l0,-700l-60.305,0"/>
+     <path id="svg_56" stroke-width="15" stroke="black" d="m447,900l0,-181l201,0"/>
+     <path id="svg_57" stroke-width="15" stroke="black" d="m754,713l0,187"/>
+     <path id="svg_58" stroke-width="15" stroke="black" d="m947,608l0,292"/>
+     <path id="svg_59" stroke-dasharray="2 2" stroke="black" d="m773.5,808c51,0 87.5,43.5 87.5,91"/>
+     <rect id="svg_60" stroke-width="3" stroke="black" height="89" width="6" y="809.5" x="766.5"/>
+     <path id="svg_61" stroke-dasharray="2 2" stroke="black" d="m355,701.5c0,-51 43.5,-87.5 91,-87.5"/>
+     <rect id="svg_62" stroke-width="3" stroke="black" transform="rotate(-90 356.5 708.5)" height="89" width="6" y="708.5" x="356.5"/>
+     <path id="svg_63" stroke-dasharray="2 2" stroke="black" d="m543.5,520c-51,0 -87.5,43.5 -87.5,91"/>
+     <rect id="svg_64" stroke-width="3" stroke="black" transform="matrix(-1 0 0 1 549 520)" height="89" width="6" y="1.5" x="-1.5"/>
+     <path id="svg_65" stroke-dasharray="2 2" stroke="black" d="m841.5,520c-51,0 -87.5,43.5 -87.5,91"/>
+     <rect id="svg_66" stroke-width="3" stroke="black" transform="matrix(-1 0 0 1 847 520)" height="89" width="6" y="1.5" x="-1.5"/>
+     <path id="svg_67" stroke-dasharray="2 2" stroke="black" d="m659.5,810c51,0 87.5,-43.5 87.5,-91"/>
+     <rect id="svg_68" stroke-width="3" stroke="black" transform="matrix(1 8.74228e-08 8.74228e-08 -1 651 807)" height="89" width="6" y="-1.5" x="1.5"/>
+     <path id="svg_69" stroke-width="15" stroke="black" d="m447,613.5l0,-413.5"/>
+     <path id="svg_70" stroke-width="15" stroke="black" d="m744,200l0,409l-187,0"/>
+     <path id="svg_71" stroke-width="15" stroke="black" d="m853,608l188,0"/>
+     <rect id="svg_72" fill="#DDB585" transform="rotate(90 389 0)" height="300" width="200" x="389"/>
+    </svg>
+   </g>
+   <g id="svg_2">
+    <svg id="svg_73" y="0" x="1030" fill="none" viewBox="0 0 775 915" height="915" width="775">
+     <rect id="svg_74" fill="#77AEB1" transform="matrix(1 0 0 -1 30 900)" height="700" width="715"/>
+     <path id="svg_75" stroke-width="30" stroke="black" d="m308.5,900l-293.5,0c0,0 0,-426.633 0,-700l58,0"/>
+     <path id="svg_76" stroke-width="30" stroke="black" d="m370,200l45.306,0l45.306,0"/>
+     <path id="svg_77" stroke-width="15" stroke="black" d="m16.9873,791l285.7757,0"/>
+     <path id="svg_78" stroke-width="15" stroke="black" d="m302.763,695l0,205"/>
+     <path id="svg_79" stroke-dasharray="2 2" stroke="black" d="m325.167,808c50.782,0 87.127,43.5 87.127,91"/>
+     <rect id="svg_80" stroke-width="3" stroke="black" height="89" width="5.96159" y="809.5" x="318.203"/>
+     <path id="svg_81" stroke-dasharray="2 2" stroke="black" d="m320.188,609c50.782,0 87.126,43.5 87.126,91"/>
+     <rect id="svg_82" stroke-width="3" stroke="black" height="89" width="5.96159" y="610.5" x="313.224"/>
+     <path id="svg_83" stroke-dasharray="2 2" stroke="black" d="m511.368,609c-50.782,0 -87.126,43.5 -87.126,91"/>
+     <rect id="svg_84" stroke-width="3" stroke="black" transform="matrix(-1 0 0 1 516.832 609)" height="89" width="5.96159" y="1.5" x="-1.5"/>
+     <path id="svg_85" stroke-width="15" stroke="black" d="m415.28,701l0,-499"/>
+     <rect id="svg_86" fill="#9AC3C5" transform="rotate(90 323 0)" height="250" width="200" x="323"/>
+     <path id="svg_87" stroke-width="30" stroke="black" d="m418,900l342,0l0,-700l-61.009,0"/>
+     <path id="svg_88" stroke-width="15" stroke="black" d="m757.716,596l-185.207,0l0,94.5l-48.509,0"/>
+     <path id="svg_89" stroke-width="15" stroke="black" d="m572.51,798l0,102"/>
+     <path id="svg_90" stroke-dasharray="2 2" stroke="black" d="m661.13,710.5c0,51 -43.314,87.5 -90.612,87.5"/>
+     <rect id="svg_91" stroke-width="3" stroke="black" transform="rotate(90 659.63 703.5)" height="88.6074" width="6" y="703.5" x="659.63"/>
+    </svg>
+   </g>
+   <rect id="svg_92" fill="#84545f" y="215" x="1805" height="900" width="1200"/>
+   <g id="svg_3">
+    <svg id="svg_93" y="0" x="3005" fill="none" viewBox="0 0 775 915" height="915" width="775">
+     <rect id="svg_94" fill="#77AEB1" transform="matrix(1 0 0 -1 30 900)" height="700" width="715"/>
+     <path id="svg_95" stroke-width="30" stroke="black" d="m308.5,900l-293.5,0c0,0 0,-426.633 0,-700l58,0"/>
+     <path id="svg_96" stroke-width="30" stroke="black" d="m370,200l45.306,0l45.306,0"/>
+     <path id="svg_97" stroke-width="15" stroke="black" d="m16.9873,791l285.7757,0"/>
+     <path id="svg_98" stroke-width="15" stroke="black" d="m302.763,695l0,205"/>
+     <path id="svg_99" stroke-dasharray="2 2" stroke="black" d="m325.167,808c50.782,0 87.127,43.5 87.127,91"/>
+     <rect id="svg_100" stroke-width="3" stroke="black" height="89" width="5.96159" y="809.5" x="318.203"/>
+     <path id="svg_101" stroke-dasharray="2 2" stroke="black" d="m320.188,609c50.782,0 87.126,43.5 87.126,91"/>
+     <rect id="svg_102" stroke-width="3" stroke="black" height="89" width="5.96159" y="610.5" x="313.224"/>
+     <path id="svg_103" stroke-dasharray="2 2" stroke="black" d="m511.368,609c-50.782,0 -87.126,43.5 -87.126,91"/>
+     <rect id="svg_104" stroke-width="3" stroke="black" transform="matrix(-1 0 0 1 516.832 609)" height="89" width="5.96159" y="1.5" x="-1.5"/>
+     <path id="svg_105" stroke-width="15" stroke="black" d="m415.28,701l0,-499"/>
+     <rect id="svg_106" fill="#9AC3C5" transform="rotate(90 323 0)" height="250" width="200" x="323"/>
+     <path id="svg_107" stroke-width="30" stroke="black" d="m418,900l342,0l0,-700l-61.009,0"/>
+     <path id="svg_108" stroke-width="15" stroke="black" d="m757.716,596l-185.207,0l0,94.5l-48.509,0"/>
+     <path id="svg_109" stroke-width="15" stroke="black" d="m572.51,798l0,102"/>
+     <path id="svg_110" stroke-dasharray="2 2" stroke="black" d="m661.13,710.5c0,51 -43.314,87.5 -90.612,87.5"/>
+     <rect id="svg_111" stroke-width="3" stroke="black" transform="rotate(90 659.63 703.5)" height="88.6074" width="6" y="703.5" x="659.63"/>
+    </svg>
+   </g>
+   <g id="svg_4">
+    <svg id="svg_112" y="0" x="3750" fill="none" viewBox="0 0 580 915" height="915" width="580">
+     <rect id="svg_113" fill="#92A8B2" transform="matrix(1 0 0 -1 30 900)" height="700" width="520"/>
+     <path id="svg_114" stroke-width="30" stroke="black" d="m71,200l-56,0l0,700l242,0"/>
+     <path id="svg_115" stroke-width="30" stroke="black" d="m358,900l207,0l0,-700l-63,0"/>
+     <path id="svg_116" stroke-width="15" stroke="black" d="m366,699l0,-103l198.5,0"/>
+     <path id="svg_117" stroke-width="15" stroke="black" d="m365,798l0,102"/>
+     <path id="svg_118" stroke-width="15" stroke="black" d="m15,791l237,0"/>
+     <path id="svg_119" stroke-width="15" stroke="black" d="m250,695l0,205"/>
+     <path id="svg_120" stroke-dasharray="2 2" stroke="black" d="m267.964,802c50.782,0 87.126,43.5 87.126,91"/>
+     <rect id="svg_121" stroke-width="3" stroke="black" height="89" width="5.96159" y="803.5" x="261"/>
+     <path id="svg_122" stroke-dasharray="2 2" stroke="black" d="m268.964,609c50.782,0 87.126,43.5 87.126,91"/>
+     <rect id="svg_123" stroke-width="3" stroke="black" height="89" width="5.96159" y="610.5" x="262"/>
+     <path id="svg_124" stroke-dasharray="2 2" stroke="black" d="m455.107,710.5c0,51 -43.314,87.5 -90.611,87.5"/>
+     <rect id="svg_125" stroke-width="3" stroke="black" transform="rotate(90 453.607 703.5)" height="88.6074" width="6" y="703.5" x="453.607"/>
+     <path id="svg_126" fill="#A9BCC4" d="m321,-0.00001l0,200.00001l-250,0l0,-200l250,-0.00001z"/>
+     <path id="svg_127" stroke="black" d="m321,-0.00001l0,200.00001l-250,0l0,-200l250,-0.00001z"/>
+    </svg>
+   </g>
+  </g>
+  <g id="svg_128" transform="matrix(-1,1.2246467991473532e-16,-1.2246467991473532e-16,-1,4222.5,2030)">
+   <rect id="svg_129" fill="#84545f" y="185" x="0" height="730" width="4115"/>
+   <line id="svg_130" stroke="black" stroke-width="30" y2="200" x2="4115" y1="200" x1="0"/>
+   <g id="svg_5">
+    <svg id="svg_131" y="0" x="0" fill="none" viewBox="0 0 580 915" height="915" width="580">
+     <rect id="svg_132" fill="#92A8B2" transform="matrix(1 0 0 -1 30 900)" height="700" width="520"/>
+     <path id="svg_133" stroke-width="30" stroke="black" d="m71,200l-56,0l0,700l242,0"/>
+     <path id="svg_134" stroke-width="30" stroke="black" d="m358,900l207,0l0,-700l-63,0"/>
+     <path id="svg_135" stroke-width="15" stroke="black" d="m366,699l0,-103l198.5,0"/>
+     <path id="svg_136" stroke-width="15" stroke="black" d="m365,798l0,102"/>
+     <path id="svg_137" stroke-width="15" stroke="black" d="m15,791l237,0"/>
+     <path id="svg_138" stroke-width="15" stroke="black" d="m250,695l0,205"/>
+     <path id="svg_139" stroke-dasharray="2 2" stroke="black" d="m267.964,802c50.782,0 87.126,43.5 87.126,91"/>
+     <rect id="svg_140" stroke-width="3" stroke="black" height="89" width="5.96159" y="803.5" x="261"/>
+     <path id="svg_141" stroke-dasharray="2 2" stroke="black" d="m268.964,609c50.782,0 87.126,43.5 87.126,91"/>
+     <rect id="svg_142" stroke-width="3" stroke="black" height="89" width="5.96159" y="610.5" x="262"/>
+     <path id="svg_143" stroke-dasharray="2 2" stroke="black" d="m455.107,710.5c0,51 -43.314,87.5 -90.611,87.5"/>
+     <rect id="svg_144" stroke-width="3" stroke="black" transform="rotate(90 453.607 703.5)" height="88.6074" width="6" y="703.5" x="453.607"/>
+     <path id="svg_145" fill="#A9BCC4" d="m321,-0.00001l0,200.00001l-250,0l0,-200l250,-0.00001z"/>
+     <path id="svg_146" stroke="black" d="m321,-0.00001l0,200.00001l-250,0l0,-200l250,-0.00001z"/>
+    </svg>
+   </g>
+   <g id="svg_6">
+    <svg id="svg_147" y="0" x="550" fill="none" viewBox="0 0 775 915" height="915" width="775">
+     <rect id="svg_148" fill="#77AEB1" transform="matrix(1 0 0 -1 30 900)" height="700" width="715"/>
+     <path id="svg_149" stroke-width="30" stroke="black" d="m308.5,900l-293.5,0c0,0 0,-426.633 0,-700l58,0"/>
+     <path id="svg_150" stroke-width="30" stroke="black" d="m370,200l45.306,0l45.306,0"/>
+     <path id="svg_151" stroke-width="15" stroke="black" d="m16.9873,791l285.7757,0"/>
+     <path id="svg_152" stroke-width="15" stroke="black" d="m302.763,695l0,205"/>
+     <path id="svg_153" stroke-dasharray="2 2" stroke="black" d="m325.167,808c50.782,0 87.127,43.5 87.127,91"/>
+     <rect id="svg_154" stroke-width="3" stroke="black" height="89" width="5.96159" y="809.5" x="318.203"/>
+     <path id="svg_155" stroke-dasharray="2 2" stroke="black" d="m320.188,609c50.782,0 87.126,43.5 87.126,91"/>
+     <rect id="svg_156" stroke-width="3" stroke="black" height="89" width="5.96159" y="610.5" x="313.224"/>
+     <path id="svg_157" stroke-dasharray="2 2" stroke="black" d="m511.368,609c-50.782,0 -87.126,43.5 -87.126,91"/>
+     <rect id="svg_158" stroke-width="3" stroke="black" transform="matrix(-1 0 0 1 516.832 609)" height="89" width="5.96159" y="1.5" x="-1.5"/>
+     <path id="svg_159" stroke-width="15" stroke="black" d="m415.28,701l0,-499"/>
+     <rect id="svg_160" fill="#9AC3C5" transform="rotate(90 323 0)" height="250" width="200" x="323"/>
+     <path id="svg_161" stroke-width="30" stroke="black" d="m418,900l342,0l0,-700l-61.009,0"/>
+     <path id="svg_162" stroke-width="15" stroke="black" d="m757.716,596l-185.207,0l0,94.5l-48.509,0"/>
+     <path id="svg_163" stroke-width="15" stroke="black" d="m572.51,798l0,102"/>
+     <path id="svg_164" stroke-dasharray="2 2" stroke="black" d="m661.13,710.5c0,51 -43.314,87.5 -90.612,87.5"/>
+     <rect id="svg_165" stroke-width="3" stroke="black" transform="rotate(90 659.63 703.5)" height="88.6074" width="6" y="703.5" x="659.63"/>
+    </svg>
+   </g>
+   <g id="svg_7">
+    <svg id="svg_166" y="0" x="1295" fill="none" viewBox="0 0 775 915" height="915" width="775">
+     <rect id="svg_167" fill="#77AEB1" transform="matrix(1 0 0 -1 30 900)" height="700" width="715"/>
+     <path id="svg_168" stroke-width="30" stroke="black" d="m308.5,900l-293.5,0c0,0 0,-426.633 0,-700l58,0"/>
+     <path id="svg_169" stroke-width="30" stroke="black" d="m370,200l45.306,0l45.306,0"/>
+     <path id="svg_170" stroke-width="15" stroke="black" d="m16.9873,791l285.7757,0"/>
+     <path id="svg_171" stroke-width="15" stroke="black" d="m302.763,695l0,205"/>
+     <path id="svg_172" stroke-dasharray="2 2" stroke="black" d="m325.167,808c50.782,0 87.127,43.5 87.127,91"/>
+     <rect id="svg_173" stroke-width="3" stroke="black" height="89" width="5.96159" y="809.5" x="318.203"/>
+     <path id="svg_174" stroke-dasharray="2 2" stroke="black" d="m320.188,609c50.782,0 87.126,43.5 87.126,91"/>
+     <rect id="svg_175" stroke-width="3" stroke="black" height="89" width="5.96159" y="610.5" x="313.224"/>
+     <path id="svg_176" stroke-dasharray="2 2" stroke="black" d="m511.368,609c-50.782,0 -87.126,43.5 -87.126,91"/>
+     <rect id="svg_177" stroke-width="3" stroke="black" transform="matrix(-1 0 0 1 516.832 609)" height="89" width="5.96159" y="1.5" x="-1.5"/>
+     <path id="svg_178" stroke-width="15" stroke="black" d="m415.28,701l0,-499"/>
+     <rect id="svg_179" fill="#9AC3C5" transform="rotate(90 323 0)" height="250" width="200" x="323"/>
+     <path id="svg_180" stroke-width="30" stroke="black" d="m418,900l342,0l0,-700l-61.009,0"/>
+     <path id="svg_181" stroke-width="15" stroke="black" d="m757.716,596l-185.207,0l0,94.5l-48.509,0"/>
+     <path id="svg_182" stroke-width="15" stroke="black" d="m572.51,798l0,102"/>
+     <path id="svg_183" stroke-dasharray="2 2" stroke="black" d="m661.13,710.5c0,51 -43.314,87.5 -90.612,87.5"/>
+     <rect id="svg_184" stroke-width="3" stroke="black" transform="rotate(90 659.63 703.5)" height="88.6074" width="6" y="703.5" x="659.63"/>
+    </svg>
+   </g>
+   <g id="svg_8">
+    <svg id="svg_185" y="0" x="2040" fill="none" viewBox="0 0 775 915" height="915" width="775">
+     <rect id="svg_186" fill="#77AEB1" transform="matrix(1 0 0 -1 30 900)" height="700" width="715"/>
+     <path id="svg_187" stroke-width="30" stroke="black" d="m308.5,900l-293.5,0c0,0 0,-426.633 0,-700l58,0"/>
+     <path id="svg_188" stroke-width="30" stroke="black" d="m370,200l45.306,0l45.306,0"/>
+     <path id="svg_189" stroke-width="15" stroke="black" d="m16.9873,791l285.7757,0"/>
+     <path id="svg_190" stroke-width="15" stroke="black" d="m302.763,695l0,205"/>
+     <path id="svg_191" stroke-dasharray="2 2" stroke="black" d="m325.167,808c50.782,0 87.127,43.5 87.127,91"/>
+     <rect id="svg_192" stroke-width="3" stroke="black" height="89" width="5.96159" y="809.5" x="318.203"/>
+     <path id="svg_193" stroke-dasharray="2 2" stroke="black" d="m320.188,609c50.782,0 87.126,43.5 87.126,91"/>
+     <rect id="svg_194" stroke-width="3" stroke="black" height="89" width="5.96159" y="610.5" x="313.224"/>
+     <path id="svg_195" stroke-dasharray="2 2" stroke="black" d="m511.368,609c-50.782,0 -87.126,43.5 -87.126,91"/>
+     <rect id="svg_196" stroke-width="3" stroke="black" transform="matrix(-1 0 0 1 516.832 609)" height="89" width="5.96159" y="1.5" x="-1.5"/>
+     <path id="svg_197" stroke-width="15" stroke="black" d="m415.28,701l0,-499"/>
+     <rect id="svg_198" fill="#9AC3C5" transform="rotate(90 323 0)" height="250" width="200" x="323"/>
+     <path id="svg_199" stroke-width="30" stroke="black" d="m418,900l342,0l0,-700l-61.009,0"/>
+     <path id="svg_200" stroke-width="15" stroke="black" d="m757.716,596l-185.207,0l0,94.5l-48.509,0"/>
+     <path id="svg_201" stroke-width="15" stroke="black" d="m572.51,798l0,102"/>
+     <path id="svg_202" stroke-dasharray="2 2" stroke="black" d="m661.13,710.5c0,51 -43.314,87.5 -90.612,87.5"/>
+     <rect id="svg_203" stroke-width="3" stroke="black" transform="rotate(90 659.63 703.5)" height="88.6074" width="6" y="703.5" x="659.63"/>
+    </svg>
+   </g>
+   <g id="svg_46">
+    <svg id="svg_204" y="0" x="2785" fill="none" viewBox="0 0 1330 915" height="915" width="1330">
+     <g id="svg_9">
+      <rect fill="#B99DA4" transform="matrix(1 0 0 -1 15 900)" height="700" width="1300" id="svg_45"/>
+      <path stroke-width="30" stroke="black" d="m1029,900l-1014,0c0,0 0,-426.633 0,-700l57.5,0" id="svg_44"/>
+      <path stroke-width="30" stroke="black" d="m372,200l44.5,0l45.5,0" id="svg_43"/>
+      <path stroke-width="30" stroke="black" d="m976,200l45.5,0l45.5,0" id="svg_42"/>
+      <path stroke-width="30" stroke="black" d="m668,200l45.5,0l45.5,0" id="svg_41"/>
+      <path stroke-width="30" stroke="black" d="m1129.5,900l185.5,0l0,-700l-47.5,0" id="svg_40"/>
+      <path stroke-width="15" stroke="black" d="m417,900l0,-193l204,0" id="svg_39"/>
+      <path stroke-width="15" stroke="black" d="m724,707l0,193" id="svg_38"/>
+      <path stroke-width="15" stroke="black" d="m1137,715l0,185" id="svg_37"/>
+      <g id="svg_34">
+       <path stroke-dasharray="2 2" stroke="black" d="m1039.5,808c51,0 87.5,43.5 87.5,91" id="svg_36"/>
+       <rect stroke-width="3" stroke="black" height="89" width="6" y="809.5" x="1032.5" id="svg_35"/>
+      </g>
+      <g id="svg_31">
+       <path stroke-dasharray="2 2" stroke="black" d="m1224,627.5c0,51 -43.5,87.5 -91,87.5" id="svg_33"/>
+       <rect stroke-width="3" stroke="black" transform="rotate(90 1222.5 620.5)" height="89" width="6" y="620.5" x="1222.5" id="svg_32"/>
+      </g>
+      <g id="svg_28">
+       <path stroke-dasharray="2 2" stroke="black" d="m325,696.5c0,-51 43.5,-87.5 91,-87.5" id="svg_30"/>
+       <rect stroke-width="3" stroke="black" transform="rotate(-90 326.5 703.5)" height="89" width="6" y="703.5" x="326.5" id="svg_29"/>
+      </g>
+      <g id="svg_25">
+       <path stroke-dasharray="2 2" stroke="black" d="m513.5,520c-51,0 -87.5,43.5 -87.5,91" id="svg_27"/>
+       <rect stroke-width="3" stroke="black" transform="matrix(-1 0 0 1 519 520)" height="89" width="6" y="1.5" x="-1.5" id="svg_26"/>
+      </g>
+      <g id="svg_22">
+       <path stroke-dasharray="2 2" stroke="black" d="m1116.5,520c-51,0 -87.5,43.5 -87.5,91" id="svg_24"/>
+       <rect stroke-width="3" stroke="black" transform="matrix(-1 0 0 1 1122 520)" height="89" width="6" y="1.5" x="-1.5" id="svg_23"/>
+      </g>
+      <g id="svg_19">
+       <path stroke-dasharray="2 2" stroke="black" d="m811.5,520c-51,0 -87.5,43.5 -87.5,91" id="svg_21"/>
+       <rect stroke-width="3" stroke="black" transform="matrix(-1 0 0 1 817 520)" height="89" width="6" y="1.5" x="-1.5" id="svg_20"/>
+      </g>
+      <g id="svg_16">
+       <path stroke-dasharray="2 2" stroke="black" d="m629.5,799c51,0 87.5,-43.5 87.5,-91" id="svg_18"/>
+       <rect stroke-width="3" stroke="black" transform="matrix(1 8.74228e-08 8.74228e-08 -1 621 796)" height="89" width="6" y="-1.5" x="1.5" id="svg_17"/>
+      </g>
+      <path stroke-width="15" stroke="black" d="m417,610.5l0,-408.5" id="svg_15"/>
+      <path stroke-width="15" stroke="black" d="m822.5,611.5l195.5,0l0,-408" id="svg_14"/>
+      <path stroke-width="15" stroke="black" d="m714,202l0,407l-187,0" id="svg_13"/>
+      <path stroke-width="15" stroke="black" d="m1127,608l188,0" id="svg_12"/>
+      <rect fill="#CBB7BB" transform="rotate(90 1267 0)" height="200" width="200" x="1267" id="svg_11"/>
+      <rect fill="#CBB7BB" transform="rotate(90 372 0)" height="300" width="200" x="372" id="svg_10"/>
+     </g>
+    </svg>
+   </g>
+  </g>
+ </g>
+</svg>
