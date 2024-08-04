@@ -1,11 +1,13 @@
-import React, { useRef, useState, useMemo, useCallback } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import { Layer, Marker, Source } from "react-map-gl";
 import {
   transformRotate,
   centroid,
   getCoord,
-  distance,
   bearing,
+  destination,
+  point,
+  lineString,
 } from "@turf/turf";
 
 const data = {
@@ -32,7 +34,6 @@ const data = {
 
 export const CustomPolygon = () => {
   const [rotation, setRotation] = useState(0);
-  const [markerPosition, setMarkerPosition] = useState(null);
   const polygonCenter = useMemo(() => getCoord(centroid(data.features[0])), []);
 
   const rotatedData = useMemo(() => {
@@ -44,27 +45,31 @@ export const CustomPolygon = () => {
     };
   }, [rotation]);
 
-  const handleMarkerDragStart = useCallback((event) => {
-    const { lngLat } = event;
-    setMarkerPosition([lngLat.lng, lngLat.lat]);
-  }, []);
+  const markerPosition = useMemo(() => {
+    return destination(point(polygonCenter), 20, rotation, {
+      units: "meters",
+    }).geometry.coordinates;
+  }, [polygonCenter, rotation]);
+
+  const lineData = useMemo(() => {
+    return {
+      type: "FeatureCollection",
+      features: [
+        {
+          type: "Feature",
+          properties: {},
+          geometry: lineString([polygonCenter, markerPosition]),
+        },
+      ],
+    };
+  }, [polygonCenter, markerPosition]);
 
   const handleMarkerDrag = useCallback(
     (event) => {
       const { lngLat } = event;
       const newPosition = [lngLat.lng, lngLat.lat];
-
-      // Calculate distance from polygon center
-      const dist = distance(polygonCenter, newPosition, {
-        units: "kilometers",
-      });
-      const maxRadius = 0.05; // 50 meters radius
-
-      if (dist <= maxRadius) {
-        setMarkerPosition(newPosition);
-        const newRotation = bearing(polygonCenter, newPosition);
-        setRotation(newRotation);
-      }
+      const newRotation = bearing(polygonCenter, newPosition);
+      setRotation(newRotation);
     },
     [polygonCenter]
   );
@@ -82,55 +87,43 @@ export const CustomPolygon = () => {
         />
       </Source>
 
-      {markerPosition ? (
-        <Marker
-          longitude={markerPosition[0]}
-          latitude={markerPosition[1]}
-          draggable
-          onDragStart={handleMarkerDragStart}
-          onDrag={handleMarkerDrag}
+      <Source id="line-source" type="geojson" data={lineData}>
+        <Layer
+          id="line-layer"
+          type="line"
+          paint={{
+            "line-color": "#f00",
+            "line-width": 2,
+          }}
+        />
+      </Source>
+
+      <Marker
+        longitude={markerPosition[0]}
+        latitude={markerPosition[1]}
+        draggable
+        onDrag={handleMarkerDrag}
+      >
+        <div
+          style={{
+            width: 40,
+            height: 40,
+            borderRadius: "50%",
+            backgroundColor: "red",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "white",
+            fontWeight: "bold",
+          }}
         >
-          <div
-            style={{
-              width: 20,
-              height: 20,
-              borderRadius: "50%",
-              backgroundColor: "red",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              color: "white",
-              fontWeight: "bold",
-            }}
-          >
-            R
-          </div>
-        </Marker>
-      ) : (
-        <Marker
-          longitude={polygonCenter[0]}
-          latitude={polygonCenter[1]}
-          draggable
-          onDragStart={handleMarkerDragStart}
-          onDrag={handleMarkerDrag}
-        >
-          <div
-            style={{
-              width: 20,
-              height: 20,
-              borderRadius: "50%",
-              backgroundColor: "red",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              color: "white",
-              fontWeight: "bold",
-            }}
-          >
-            R
-          </div>
-        </Marker>
-      )}
+          <img
+            src="/rotate-svgrepo-com.png"
+            alt="Rotate"
+            style={{ width: "100%", height: "100%" }}
+          />
+        </div>
+      </Marker>
     </>
   );
 };
