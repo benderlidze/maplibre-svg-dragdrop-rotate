@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@turf/turf": "^7.0.0",
+    "@types/lodash": "^4.17.7",
+    "lodash": "^4.17.21",
     "mapbox-gl-draw-rotate-scale-rect-mode": "git+https://github.com/drykovanov/mapbox-gl-draw-rotate-scale-rect-mode#0.1.10",
     "maplibre-gl": "^4.5.1",
     "next": "14.2.5",

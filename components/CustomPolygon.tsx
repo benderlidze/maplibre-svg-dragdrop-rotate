@@ -1,6 +1,12 @@
 import React, { useRef, useState, useMemo, useCallback } from "react";
 import { Layer, Marker, Source } from "react-map-gl";
-import { transformRotate, centroid, getCoord } from "@turf/turf";
+import {
+  transformRotate,
+  centroid,
+  getCoord,
+  distance,
+  bearing,
+} from "@turf/turf";
 
 const data = {
   type: "FeatureCollection",
@@ -24,107 +30,107 @@ const data = {
   ],
 } as GeoJSON.FeatureCollection;
 
-const MemoizedImageSource = React.memo(
-  ({ coordinates }: { coordinates: number[][] }) => (
-    <Source type="image" url="/svg.png" coordinates={coordinates}>
-      <Layer
-        type="raster"
-        paint={{
-          "raster-fade-duration": 0,
-          "raster-opacity": 1,
-        }}
-      />
-    </Source>
-  ),
-  (prevProps, nextProps) =>
-    JSON.stringify(prevProps.coordinates) ===
-    JSON.stringify(nextProps.coordinates)
-);
-
 export const CustomPolygon = () => {
-  const [polygon, setPolygon] = useState(data);
-  const [isDragging, setIsDragging] = useState(false);
   const [rotation, setRotation] = useState(0);
-  const divRef = useRef<HTMLDivElement>(null);
+  const [markerPosition, setMarkerPosition] = useState(null);
+  const polygonCenter = useMemo(() => getCoord(centroid(data.features[0])), []);
 
-  const center = useMemo(() => getCoord(centroid(polygon)), [polygon]);
-  const [lng, lat] = center;
+  const rotatedData = useMemo(() => {
+    return {
+      ...data,
+      features: [
+        transformRotate(data.features[0], rotation, { pivot: polygonCenter }),
+      ],
+    };
+  }, [rotation]);
 
-  const handleMouseDown = useCallback((event: React.MouseEvent) => {
-    event.preventDefault();
-    event.stopPropagation();
-    setIsDragging(true);
+  const handleMarkerDragStart = useCallback((event) => {
+    const { lngLat } = event;
+    setMarkerPosition([lngLat.lng, lngLat.lat]);
   }, []);
 
-  const handleMouseMove = useCallback(
-    (event: React.MouseEvent) => {
-      if (!isDragging || !divRef.current) return;
+  const handleMarkerDrag = useCallback(
+    (event) => {
+      const { lngLat } = event;
+      const newPosition = [lngLat.lng, lngLat.lat];
 
-      const rect = divRef.current.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
+      // Calculate distance from polygon center
+      const dist = distance(polygonCenter, newPosition, {
+        units: "kilometers",
+      });
+      const maxRadius = 0.05; // 50 meters radius
 
-      const angle = Math.atan2(
-        event.clientY - centerY,
-        event.clientX - centerX
-      );
-      const degrees = (angle * 180) / Math.PI + 90;
-
-      const rotatedPoly = transformRotate(polygon, degrees / 25);
-
-      setPolygon(rotatedPoly);
-      setRotation(degrees);
+      if (dist <= maxRadius) {
+        setMarkerPosition(newPosition);
+        const newRotation = bearing(polygonCenter, newPosition);
+        setRotation(newRotation);
+      }
     },
-    [isDragging, polygon]
-  );
-
-  const handleMouseUp = useCallback(() => {
-    setIsDragging(false);
-  }, []);
-
-  const coordinates = useMemo(
-    () => polygon.features[0].geometry.coordinates[0].slice(0, 4),
-    [polygon]
+    [polygonCenter]
   );
 
   return (
     <>
-      <Marker longitude={-0.12246169380219385} latitude={51.514320237250246}>
-        <div
-          ref={divRef}
-          className="bg-white border-2 border-red-600 rounded-full w-[40px] h-[40px] flex justify-center items-center"
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-        >
-          {rotation.toFixed(0)}°
-        </div>
-      </Marker>
-
-      <Marker longitude={lng} latitude={lat}>
-        <div
-          className="border-2 border-red-600 rounded-full w-[500px] h-[500px] flex justify-center items-center"
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-        >
-          {rotation.toFixed(0)}°
-        </div>
-      </Marker>
-
-      <Source type="geojson" data={polygon}>
+      <Source id="polygon-source" type="geojson" data={rotatedData}>
         <Layer
-          type="line"
+          id="polygon-layer"
+          type="fill"
           paint={{
-            "line-color": "#ff0000",
-            "line-width": 2,
+            "fill-color": "#088",
+            "fill-opacity": 0.8,
           }}
         />
       </Source>
 
-      <MemoizedImageSource coordinates={coordinates} />
+      {markerPosition ? (
+        <Marker
+          longitude={markerPosition[0]}
+          latitude={markerPosition[1]}
+          draggable
+          onDragStart={handleMarkerDragStart}
+          onDrag={handleMarkerDrag}
+        >
+          <div
+            style={{
+              width: 20,
+              height: 20,
+              borderRadius: "50%",
+              backgroundColor: "red",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "white",
+              fontWeight: "bold",
+            }}
+          >
+            R
+          </div>
+        </Marker>
+      ) : (
+        <Marker
+          longitude={polygonCenter[0]}
+          latitude={polygonCenter[1]}
+          draggable
+          onDragStart={handleMarkerDragStart}
+          onDrag={handleMarkerDrag}
+        >
+          <div
+            style={{
+              width: 20,
+              height: 20,
+              borderRadius: "50%",
+              backgroundColor: "red",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "white",
+              fontWeight: "bold",
+            }}
+          >
+            R
+          </div>
+        </Marker>
+      )}
     </>
   );
 };
