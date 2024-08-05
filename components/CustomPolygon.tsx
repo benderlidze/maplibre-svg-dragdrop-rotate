@@ -36,7 +36,10 @@ const initialData = {
 export const CustomPolygon = () => {
   const [rotation, setRotation] = useState(0);
   const [data, setData] = useState(initialData);
-  const polygonCenter = useMemo(() => getCoord(centroid(data.features[0])), []);
+  const polygonCenter = useMemo(
+    () => getCoord(centroid(data.features[0])),
+    [data]
+  );
 
   const rotatedData = useMemo(() => {
     return {
@@ -45,7 +48,7 @@ export const CustomPolygon = () => {
         transformRotate(data.features[0], rotation, { pivot: polygonCenter }),
       ],
     } as GeoJSON.FeatureCollection;
-  }, [rotation, data]);
+  }, [rotation, data, polygonCenter]);
 
   const markerPosition = useMemo(() => {
     return destination(point(polygonCenter), 20, rotation, {
@@ -58,7 +61,7 @@ export const CustomPolygon = () => {
       type: "FeatureCollection",
       features: [lineString([polygonCenter, markerPosition])],
     } as GeoJSON.FeatureCollection;
-  }, [polygonCenter, markerPosition, rotation]);
+  }, [polygonCenter, markerPosition]);
 
   const handleMarkerDrag = useCallback(
     (event: any) => {
@@ -72,9 +75,29 @@ export const CustomPolygon = () => {
 
   const handlePolygonDrag = useCallback(
     (event: any) => {
-      
+      const { lngLat } = event;
+      const newCenter = [lngLat.lng, lngLat.lat];
+      const translation = [
+        newCenter[0] - polygonCenter[0],
+        newCenter[1] - polygonCenter[1],
+      ];
+
+      const newData = {
+        ...data,
+        features: [
+          transformTranslate(
+            data.features[0],
+            Math.sqrt(
+              Math.pow(translation[0], 2) + Math.pow(translation[1], 2)
+            ),
+            bearing(polygonCenter, newCenter)
+          ),
+        ],
+      } as GeoJSON.FeatureCollection;
+
+      setData(newData);
     },
-    [polygonCenter]
+    [data, polygonCenter]
   );
 
   const coordinates = (
@@ -139,7 +162,7 @@ export const CustomPolygon = () => {
         >
           <img
             src="/move-alt-svgrepo-com.png"
-            alt="Rotate"
+            alt="Move"
             style={{ width: "100%", height: "100%" }}
           />
         </div>
@@ -169,13 +192,11 @@ export const CustomPolygon = () => {
         </div>
       </Marker>
 
-      {/* HIDDEN MARKER */}
       <Marker
         longitude={markerPosition[0]}
         latitude={markerPosition[1]}
         draggable
         onDrag={handleMarkerDrag}
-        // onDragEnd={handleMarkerDragEnd}
       >
         <div
           style={{
