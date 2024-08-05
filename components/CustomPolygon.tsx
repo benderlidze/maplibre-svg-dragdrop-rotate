@@ -8,9 +8,10 @@ import {
   destination,
   point,
   lineString,
+  transformTranslate,
 } from "@turf/turf";
 
-const data = {
+const initialData = {
   type: "FeatureCollection",
   features: [
     {
@@ -34,6 +35,7 @@ const data = {
 
 export const CustomPolygon = () => {
   const [rotation, setRotation] = useState(0);
+  const [data, setData] = useState(initialData);
   const polygonCenter = useMemo(() => getCoord(centroid(data.features[0])), []);
 
   const rotatedData = useMemo(() => {
@@ -42,8 +44,8 @@ export const CustomPolygon = () => {
       features: [
         transformRotate(data.features[0], rotation, { pivot: polygonCenter }),
       ],
-    };
-  }, [rotation]);
+    } as GeoJSON.FeatureCollection;
+  }, [rotation, data]);
 
   const markerPosition = useMemo(() => {
     return destination(point(polygonCenter), 20, rotation, {
@@ -54,18 +56,12 @@ export const CustomPolygon = () => {
   const lineData = useMemo(() => {
     return {
       type: "FeatureCollection",
-      features: [
-        {
-          type: "Feature",
-          properties: {},
-          geometry: lineString([polygonCenter, markerPosition]),
-        },
-      ],
-    };
-  }, [polygonCenter, markerPosition]);
+      features: [lineString([polygonCenter, markerPosition])],
+    } as GeoJSON.FeatureCollection;
+  }, [polygonCenter, markerPosition, rotation]);
 
   const handleMarkerDrag = useCallback(
-    (event) => {
+    (event: any) => {
       const { lngLat } = event;
       const newPosition = [lngLat.lng, lngLat.lat];
       const newRotation = bearing(polygonCenter, newPosition);
@@ -74,6 +70,17 @@ export const CustomPolygon = () => {
     [polygonCenter]
   );
 
+  const handlePolygonDrag = useCallback(
+    (event: any) => {
+      
+    },
+    [polygonCenter]
+  );
+
+  const coordinates = (
+    rotatedData.features[0].geometry as GeoJSON.Polygon
+  ).coordinates[0].slice(0, 4);
+
   return (
     <>
       <Source id="polygon-source" type="geojson" data={rotatedData}>
@@ -81,8 +88,18 @@ export const CustomPolygon = () => {
           id="polygon-layer"
           type="fill"
           paint={{
-            "fill-color": "#088",
-            "fill-opacity": 0.8,
+            "fill-color": "gray",
+            "fill-opacity": 0.2,
+          }}
+        />
+      </Source>
+
+      <Source type="image" url="/svg.png" coordinates={coordinates}>
+        <Layer
+          type="raster"
+          paint={{
+            "raster-fade-duration": 0,
+            "raster-opacity": 1,
           }}
         />
       </Source>
@@ -92,29 +109,56 @@ export const CustomPolygon = () => {
           id="line-layer"
           type="line"
           paint={{
-            "line-color": "#f00",
+            "line-color": "gray",
             "line-width": 2,
+            "line-dasharray": [2, 2],
           }}
         />
       </Source>
 
       <Marker
-        longitude={markerPosition[0]}
-        latitude={markerPosition[1]}
+        longitude={polygonCenter[0]}
+        latitude={polygonCenter[1]}
         draggable
-        onDrag={handleMarkerDrag}
+        onDrag={handlePolygonDrag}
       >
         <div
           style={{
             width: 40,
             height: 40,
             borderRadius: "50%",
-            backgroundColor: "red",
+            backgroundColor: "white",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             color: "white",
             fontWeight: "bold",
+            opacity: 1,
+            border: "2px solid gray",
+          }}
+        >
+          <img
+            src="/move-alt-svgrepo-com.png"
+            alt="Rotate"
+            style={{ width: "100%", height: "100%" }}
+          />
+        </div>
+      </Marker>
+
+      <Marker longitude={markerPosition[0]} latitude={markerPosition[1]}>
+        <div
+          style={{
+            width: 40,
+            height: 40,
+            borderRadius: "50%",
+            backgroundColor: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "white",
+            fontWeight: "bold",
+            opacity: 1,
+            border: "2px solid gray",
           }}
         >
           <img
@@ -123,6 +167,25 @@ export const CustomPolygon = () => {
             style={{ width: "100%", height: "100%" }}
           />
         </div>
+      </Marker>
+
+      {/* HIDDEN MARKER */}
+      <Marker
+        longitude={markerPosition[0]}
+        latitude={markerPosition[1]}
+        draggable
+        onDrag={handleMarkerDrag}
+        // onDragEnd={handleMarkerDragEnd}
+      >
+        <div
+          style={{
+            width: 40,
+            height: 40,
+            borderRadius: "50%",
+            display: "flex",
+            opacity: 0,
+          }}
+        ></div>
       </Marker>
     </>
   );
