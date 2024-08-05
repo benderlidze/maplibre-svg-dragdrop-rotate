@@ -9,6 +9,7 @@ import {
   point,
   lineString,
   transformTranslate,
+  distance,
 } from "@turf/turf";
 
 const initialData = {
@@ -77,19 +78,12 @@ export const CustomPolygon = () => {
     (event: any) => {
       const { lngLat } = event;
       const newCenter = [lngLat.lng, lngLat.lat];
-      const translation = [
-        newCenter[0] - polygonCenter[0],
-        newCenter[1] - polygonCenter[1],
-      ];
-
       const newData = {
         ...data,
         features: [
           transformTranslate(
             data.features[0],
-            Math.sqrt(
-              Math.pow(translation[0], 2) + Math.pow(translation[1], 2)
-            ),
+            distance(point(polygonCenter), point(newCenter)),
             bearing(polygonCenter, newCenter)
           ),
         ],
@@ -143,7 +137,7 @@ export const CustomPolygon = () => {
         longitude={polygonCenter[0]}
         latitude={polygonCenter[1]}
         draggable
-        onDrag={handlePolygonDrag}
+        onDragEnd={handlePolygonDrag}
       >
         <div
           style={{
