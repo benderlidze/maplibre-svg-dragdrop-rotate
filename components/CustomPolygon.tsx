@@ -137,7 +137,7 @@ export const CustomPolygon = () => {
         longitude={polygonCenter[0]}
         latitude={polygonCenter[1]}
         draggable
-        onDragEnd={handlePolygonDrag}
+        onDrag={handlePolygonDrag}
       >
         <div
           style={{
