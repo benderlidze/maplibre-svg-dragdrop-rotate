@@ -37,6 +37,13 @@ const initialData = {
 export const CustomPolygon = () => {
   const [rotation, setRotation] = useState(0);
   const [data, setData] = useState(initialData);
+  const [imageCoordinates, setImageCoordinates] = useState(
+    (initialData.features[0].geometry as GeoJSON.Polygon).coordinates[0].slice(
+      0,
+      4
+    )
+  );
+
   const polygonCenter = useMemo(
     () => getCoord(centroid(data.features[0])),
     [data]
@@ -94,9 +101,13 @@ export const CustomPolygon = () => {
     [data, polygonCenter]
   );
 
-  const coordinates = (
-    rotatedData.features[0].geometry as GeoJSON.Polygon
-  ).coordinates[0].slice(0, 4);
+  const updateImageLayer = () => {
+    setImageCoordinates(
+      (
+        rotatedData.features[0].geometry as GeoJSON.Polygon
+      ).coordinates[0].slice(0, 4)
+    );
+  };
 
   return (
     <>
@@ -111,7 +122,7 @@ export const CustomPolygon = () => {
         />
       </Source>
 
-      <Source type="image" url="/svg.png" coordinates={coordinates}>
+      <Source type="image" url="/svg.png" coordinates={imageCoordinates}>
         <Layer
           type="raster"
           paint={{
@@ -138,6 +149,7 @@ export const CustomPolygon = () => {
         latitude={polygonCenter[1]}
         draggable
         onDrag={handlePolygonDrag}
+        onDragEnd={updateImageLayer}
       >
         <div
           style={{
@@ -191,6 +203,7 @@ export const CustomPolygon = () => {
         latitude={markerPosition[1]}
         draggable
         onDrag={handleMarkerDrag}
+        onDragEnd={updateImageLayer}
       >
         <div
           style={{

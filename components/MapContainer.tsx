@@ -1,8 +1,7 @@
 "use client";
 import * as React from "react";
-import Map, { Layer, Marker, Source } from "react-map-gl/maplibre";
+import Map from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { MeasureTool } from "./MeasureTool";
 import { CustomPolygon } from "@/components/CustomPolygon";
 import { useRef } from "react";
 
@@ -20,7 +19,6 @@ export const MapContainer = () => {
       mapStyle="https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json"
     >
       <CustomPolygon />
-      <MeasureTool />
     </Map>
   );
 };
