@@ -98,9 +98,8 @@ export const CustomPolygon = ({ geojson }: CustomPolygonProps) => {
 
   return (
     <div>
-      <Source id="polygon-source" type="geojson" data={rotatedData}>
+      <Source type="geojson" data={rotatedData}>
         <Layer
-          id="polygon-layer"
           type="fill"
           paint={{
             "fill-color": "gray",
@@ -119,9 +118,8 @@ export const CustomPolygon = ({ geojson }: CustomPolygonProps) => {
         />
       </Source>
 
-      <Source id="line-source" type="geojson" data={lineData}>
+      <Source type="geojson" data={lineData}>
         <Layer
-          id="line-layer"
           type="line"
           paint={{
             "line-color": "gray",
