@@ -12,29 +12,16 @@ import {
   distance,
 } from "@turf/turf";
 
-const initialData = {
-  type: "FeatureCollection",
-  features: [
-    {
-      type: "Feature",
-      properties: {},
-      geometry: {
-        coordinates: [
-          [
-            [-0.12189493188387246, 51.514494221063586],
-            [-0.12250390323998772, 51.514494221063586],
-            [-0.12250390323998772, 51.51440989210448],
-            [-0.12189493188387246, 51.51440989210448],
-            [-0.12189493188387246, 51.514494221063586],
-          ],
-        ],
-        type: "Polygon",
-      },
-    },
-  ],
-} as GeoJSON.FeatureCollection;
+type CustomPolygonProps = {
+  geojson: GeoJSON.Feature;
+};
 
-export const CustomPolygon = () => {
+export const CustomPolygon = ({ geojson }: CustomPolygonProps) => {
+  const initialData = {
+    type: "FeatureCollection",
+    features: [geojson],
+  } as GeoJSON.FeatureCollection;
+
   const [rotation, setRotation] = useState(0);
   const [data, setData] = useState(initialData);
   const [imageCoordinates, setImageCoordinates] = useState(
@@ -110,7 +97,7 @@ export const CustomPolygon = () => {
   };
 
   return (
-    <>
+    <div>
       <Source id="polygon-source" type="geojson" data={rotatedData}>
         <Layer
           id="polygon-layer"
@@ -215,6 +202,6 @@ export const CustomPolygon = () => {
           }}
         ></div>
       </Marker>
-    </>
+    </div>
   );
 };
