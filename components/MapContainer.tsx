@@ -5,6 +5,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import { CustomPolygon } from "@/components/CustomPolygon";
 import { DragEventHandler, useRef } from "react";
 import { createPolygonAtAPoint } from "@/tools/createPolygonAtAPoint";
+import { MeasureTool } from "./MeasureTool";
 
 export const MapContainer = () => {
   const [polygons, setPolygons] = React.useState<
@@ -15,9 +16,11 @@ export const MapContainer = () => {
   const handleDrop: DragEventHandler = (e) => {
     if (!mapRef || !mapRef.current) return;
     e.preventDefault();
-    const { clientX, clientY } = e;
+    const { layerX, layerY } = e.nativeEvent;
+    console.log("e", e);
     const map = mapRef.current as maplibregl.Map;
-    const point = map.unproject([clientX, clientY]);
+
+    const point = map.unproject([layerX, layerY]);
     const { lat, lng } = point;
 
     // Example usage
@@ -55,6 +58,8 @@ export const MapContainer = () => {
         {polygons.map((polygon, index: number) => (
           <CustomPolygon key={index} geojson={polygon} />
         ))}
+
+        <MeasureTool />
       </Map>
     </div>
   );

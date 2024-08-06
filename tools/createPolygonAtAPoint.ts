@@ -13,6 +13,8 @@ export const createPolygonAtAPoint = ({
   width,
   height,
 }: PolygonOptions) => {
+  console.log("lat,lng", lat, lng);
+
   const halfWidth = width / 2 / 1000;
   const halfHeight = height / 2 / 1000;
 
