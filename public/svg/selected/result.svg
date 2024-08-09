@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+<rect y="185" width="1930" height="930" fill="#84545f"/>
+<rect x="15" y="200" width="1930" height="930" fill="none" stroke="#000" stroke-width="30"/>
+<svg width="1330" height="915" fill="none" viewBox="0 0 1330 915">
+<rect transform="matrix(1 0 0 -1 15 900)" width="1300" height="700" fill="#956A74"/>
+<path d="m1029 900h-1014v-700h57.5" stroke="#000" stroke-width="30"/>
+<path d="m372 200h90" stroke="#000" stroke-width="30"/>
+<path d="m976 200h91" stroke="#000" stroke-width="30"/>
+<path d="m668 200h91" stroke="#000" stroke-width="30"/>
+<path d="M1129.5 900H1315V200H1267.5" stroke="#000" stroke-width="30"/>
+<path d="m417 900v-193h204" stroke="#000" stroke-width="15"/>
+<path d="m724 707v193" stroke="#000" stroke-width="15"/>
+<path d="m1137 715v185" stroke="#000" stroke-width="15"/>
+<path d="m1039.5 808c51 0 87.5 43.5 87.5 91" stroke="#000" stroke-dasharray="2 2"/>
+<rect x="1032.5" y="809.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m1224 627.5c0 51-43.5 87.5-91 87.5" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="rotate(90 1222.5 620.5)" x="1222.5" y="620.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m325 696.5c0-51 43.5-87.5 91-87.5" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="rotate(-90 326.5 703.5)" x="326.5" y="703.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m513.5 520c-51 0-87.5 43.5-87.5 91" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="matrix(-1 0 0 1 519 520)" x="-1.5" y="1.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m1116.5 520c-51 0-87.5 43.5-87.5 91" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="matrix(-1 0 0 1 1122 520)" x="-1.5" y="1.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m811.5 520c-51 0-87.5 43.5-87.5 91" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="matrix(-1 0 0 1 817 520)" x="-1.5" y="1.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m629.5 799c51 0 87.5-43.5 87.5-91" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="matrix(1 8.7423e-8 8.7423e-8 -1 621 796)" x="1.5" y="-1.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m417 610.5v-408.5" stroke="#000" stroke-width="15"/>
+<path d="m822.5 611.5h195.5v-408" stroke="#000" stroke-width="15"/>
+<path d="m714 202v407h-187" stroke="#000" stroke-width="15"/>
+<path d="m1127 608h188" stroke="#000" stroke-width="15"/>
+<rect transform="rotate(90 1267 0)" x="1267" width="200" height="200" fill="#B99DA4"/>
+<rect transform="rotate(90 372 0)" x="372" width="200" height="300" fill="#B99DA4"/>
+</svg>
+<rect x="1330" y="215" width="600" height="900" fill="#84545f"/>
+<g transform="matrix(-1 1.2246e-16 -1.2246e-16 -1 1330 2030)">
+<rect y="185" width="1330" height="730" fill="#84545f"/>
+<line x2="1330" y1="200" y2="200" stroke="#000" stroke-width="30"/>
+<svg width="1330" height="915" fill="none" viewBox="0 0 1330 915">
+<rect transform="matrix(1 0 0 -1 15 900)" width="1300" height="700" fill="#956A74"/>
+<path d="m1029 900h-1014v-700h57.5" stroke="#000" stroke-width="30"/>
+<path d="m372 200h90" stroke="#000" stroke-width="30"/>
+<path d="m976 200h91" stroke="#000" stroke-width="30"/>
+<path d="m668 200h91" stroke="#000" stroke-width="30"/>
+<path d="M1129.5 900H1315V200H1267.5" stroke="#000" stroke-width="30"/>
+<path d="m417 900v-193h204" stroke="#000" stroke-width="15"/>
+<path d="m724 707v193" stroke="#000" stroke-width="15"/>
+<path d="m1137 715v185" stroke="#000" stroke-width="15"/>
+<path d="m1039.5 808c51 0 87.5 43.5 87.5 91" stroke="#000" stroke-dasharray="2 2"/>
+<rect x="1032.5" y="809.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m1224 627.5c0 51-43.5 87.5-91 87.5" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="rotate(90 1222.5 620.5)" x="1222.5" y="620.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m325 696.5c0-51 43.5-87.5 91-87.5" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="rotate(-90 326.5 703.5)" x="326.5" y="703.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m513.5 520c-51 0-87.5 43.5-87.5 91" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="matrix(-1 0 0 1 519 520)" x="-1.5" y="1.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m1116.5 520c-51 0-87.5 43.5-87.5 91" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="matrix(-1 0 0 1 1122 520)" x="-1.5" y="1.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m811.5 520c-51 0-87.5 43.5-87.5 91" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="matrix(-1 0 0 1 817 520)" x="-1.5" y="1.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m629.5 799c51 0 87.5-43.5 87.5-91" stroke="#000" stroke-dasharray="2 2"/>
+<rect transform="matrix(1 8.7423e-8 8.7423e-8 -1 621 796)" x="1.5" y="-1.5" width="6" height="89" stroke="#000" stroke-width="3"/>
+<path d="m417 610.5v-408.5" stroke="#000" stroke-width="15"/>
+<path d="m822.5 611.5h195.5v-408" stroke="#000" stroke-width="15"/>
+<path d="m714 202v407h-187" stroke="#000" stroke-width="15"/>
+<path d="m1127 608h188" stroke="#000" stroke-width="15"/>
+<rect transform="rotate(90 1267 0)" x="1267" width="200" height="200" fill="#B99DA4"/>
+<rect transform="rotate(90 372 0)" x="372" width="200" height="300" fill="#B99DA4"/>
+</svg>
+</g>
+</svg>

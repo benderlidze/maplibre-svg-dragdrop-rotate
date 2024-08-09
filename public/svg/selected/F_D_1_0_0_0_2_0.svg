@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 1930 2030">
+    <g>
+        <rect width="1930" height="930" x="0" y="185" fill="#84545f" />
+        <rect width="1930" height="930" x="15" y="200" stroke-width="30" stroke="black" fill="none" />
+        <svg width="1330" height="915" viewBox="0 0 1330 915" fill="none">
+            <rect width="1300" height="700" transform="matrix(1 0 0 -1 15 900)" fill="#956A74" />
+            <path d="M1029 900H15C15 900 15 473.367 15 200L72.5 200" stroke="black"
+                stroke-width="30" />
+            <path d="M372 200H416.5H462" stroke="black" stroke-width="30" />
+            <path d="M976 200H1021.5H1067" stroke="black" stroke-width="30" />
+            <path d="M668 200H713.5H759" stroke="black" stroke-width="30" />
+            <path d="M1129.5 900H1315V200H1267.5" stroke="black" stroke-width="30" />
+            <path d="M417 900L417 707L621 707" stroke="black" stroke-width="15" />
+            <path d="M724 707L724 900" stroke="black" stroke-width="15" />
+            <path d="M1137 715L1137 900" stroke="black" stroke-width="15" />
+            <path d="M1039.5 808C1090.5 808 1127 851.5 1127 899" stroke="black"
+                stroke-dasharray="2 2" />
+            <rect x="1032.5" y="809.5" width="6" height="89" stroke="black" stroke-width="3" />
+            <path d="M1224 627.5C1224 678.5 1180.5 715 1133 715" stroke="black"
+                stroke-dasharray="2 2" />
+            <rect x="1222.5" y="620.5" width="6" height="89" transform="rotate(90 1222.5 620.5)"
+                stroke="black" stroke-width="3" />
+            <path d="M325 696.5C325 645.5 368.5 609 416 609" stroke="black" stroke-dasharray="2 2" />
+            <rect x="326.5" y="703.5" width="6" height="89" transform="rotate(-90 326.5 703.5)"
+                stroke="black" stroke-width="3" />
+            <path d="M513.5 520C462.5 520 426 563.5 426 611" stroke="black" stroke-dasharray="2 2" />
+            <rect x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 519 520)"
+                stroke="black" stroke-width="3" />
+            <path d="M1116.5 520C1065.5 520 1029 563.5 1029 611" stroke="black"
+                stroke-dasharray="2 2" />
+            <rect x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 1122 520)"
+                stroke="black" stroke-width="3" />
+            <path d="M811.5 520C760.5 520 724 563.5 724 611" stroke="black" stroke-dasharray="2 2" />
+            <rect x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 817 520)"
+                stroke="black" stroke-width="3" />
+            <path d="M629.5 799C680.5 799 717 755.5 717 708" stroke="black" stroke-dasharray="2 2" />
+            <rect x="1.5" y="-1.5" width="6" height="89"
+                transform="matrix(1 8.74228e-08 8.74228e-08 -1 621 796)" stroke="black"
+                stroke-width="3" />
+            <path d="M417 610.5L417 202" stroke="black" stroke-width="15" />
+            <path d="M822.5 611.5H1018V203.5" stroke="black" stroke-width="15" />
+            <path d="M714 202L714 609L527 609" stroke="black" stroke-width="15" />
+            <path d="M1127 608L1315 608" stroke="black" stroke-width="15" />
+            <rect x="1267" width="200" height="200" transform="rotate(90 1267 0)" fill="#B99DA4" />
+            <rect x="372" width="200" height="300" transform="rotate(90 372 0)" fill="#B99DA4" />
+        </svg>
+        <rect width="600" height="900" x="1330" y="215" fill="#84545f" />
+    </g>
+    <g transform="matrix(-1,1.2246467991473532e-16,-1.2246467991473532e-16,-1,1330,2030)">
+        <rect width="1330" height="730" x="0" y="185" fill="#84545f" />
+        <line x1="0" y1="200" x2="1330" y2="200" stroke-width="30" stroke="black" />
+        <svg width="1330" height="915" viewBox="0 0 1330 915" fill="none" x="0" y="0">
+            <rect width="1300" height="700" transform="matrix(1 0 0 -1 15 900)" fill="#956A74" />
+            <path d="M1029 900H15C15 900 15 473.367 15 200L72.5 200" stroke="black"
+                stroke-width="30" />
+            <path d="M372 200H416.5H462" stroke="black" stroke-width="30" />
+            <path d="M976 200H1021.5H1067" stroke="black" stroke-width="30" />
+            <path d="M668 200H713.5H759" stroke="black" stroke-width="30" />
+            <path d="M1129.5 900H1315V200H1267.5" stroke="black" stroke-width="30" />
+            <path d="M417 900L417 707L621 707" stroke="black" stroke-width="15" />
+            <path d="M724 707L724 900" stroke="black" stroke-width="15" />
+            <path d="M1137 715L1137 900" stroke="black" stroke-width="15" />
+            <path d="M1039.5 808C1090.5 808 1127 851.5 1127 899" stroke="black"
+                stroke-dasharray="2 2" />
+            <rect x="1032.5" y="809.5" width="6" height="89" stroke="black" stroke-width="3" />
+            <path d="M1224 627.5C1224 678.5 1180.5 715 1133 715" stroke="black"
+                stroke-dasharray="2 2" />
+            <rect x="1222.5" y="620.5" width="6" height="89" transform="rotate(90 1222.5 620.5)"
+                stroke="black" stroke-width="3" />
+            <path d="M325 696.5C325 645.5 368.5 609 416 609" stroke="black" stroke-dasharray="2 2" />
+            <rect x="326.5" y="703.5" width="6" height="89" transform="rotate(-90 326.5 703.5)"
+                stroke="black" stroke-width="3" />
+            <path d="M513.5 520C462.5 520 426 563.5 426 611" stroke="black" stroke-dasharray="2 2" />
+            <rect x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 519 520)"
+                stroke="black" stroke-width="3" />
+            <path d="M1116.5 520C1065.5 520 1029 563.5 1029 611" stroke="black"
+                stroke-dasharray="2 2" />
+            <rect x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 1122 520)"
+                stroke="black" stroke-width="3" />
+            <path d="M811.5 520C760.5 520 724 563.5 724 611" stroke="black" stroke-dasharray="2 2" />
+            <rect x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 817 520)"
+                stroke="black" stroke-width="3" />
+            <path d="M629.5 799C680.5 799 717 755.5 717 708" stroke="black" stroke-dasharray="2 2" />
+            <rect x="1.5" y="-1.5" width="6" height="89"
+                transform="matrix(1 8.74228e-08 8.74228e-08 -1 621 796)" stroke="black"
+                stroke-width="3" />
+            <path d="M417 610.5L417 202" stroke="black" stroke-width="15" />
+            <path d="M822.5 611.5H1018V203.5" stroke="black" stroke-width="15" />
+            <path d="M714 202L714 609L527 609" stroke="black" stroke-width="15" />
+            <path d="M1127 608L1315 608" stroke="black" stroke-width="15" />
+            <rect x="1267" width="200" height="200" transform="rotate(90 1267 0)" fill="#B99DA4" />
+            <rect x="372" width="200" height="300" transform="rotate(90 372 0)" fill="#B99DA4" />
+        </svg>
+    </g>
+</svg>

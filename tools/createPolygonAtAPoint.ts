@@ -1,13 +1,16 @@
+import { FeaturePolygonWithProps } from "@/components/CustomPolygon";
 import * as turf from "@turf/turf";
 
-interface PolygonOptions {
+type PolygonOptions = {
+  svgLink: string;
   lat: number;
   lng: number;
   width: number;
   height: number;
-}
+};
 
 export const createPolygonAtAPoint = ({
+  svgLink,
   lat,
   lng,
   width,
@@ -48,7 +51,7 @@ export const createPolygonAtAPoint = ({
 
   const polygon = turf.polygon([polygonCoords], {
     id: new Date().getTime(),
-  }) as GeoJSON.Feature<GeoJSON.Polygon>;
+  });
 
-  return polygon;
+  return polygon as FeaturePolygonWithProps;
 };

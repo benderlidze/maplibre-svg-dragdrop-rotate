@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"><rect width="7905" height="930" x="0" y="185" fill="#84545f"></rect><rect width="1200" height="930" x="4280" y="185" fill="#84545f"></rect><rect width="7875" height="930" x="15" y="200" stroke-width="30" stroke="black" fill="none"></rect><svg width="1330" height="915" viewBox="0 0 1330 915" fill="none">
+<g id="3 bed_91/False">
+<rect id="Rectangle 7" width="1300" height="700" transform="matrix(1 0 0 -1 15 900)" fill="#B99DA4"></rect>
+<path id="Vector 40" d="M1029 900H15C15 900 15 473.367 15 200L72.5 200" stroke="black" stroke-width="30"></path>
+<path id="Vector 41" d="M372 200H416.5H462" stroke="black" stroke-width="30"></path>
+<path id="Vector 50" d="M976 200H1021.5H1067" stroke="black" stroke-width="30"></path>
+<path id="Vector 42" d="M668 200H713.5H759" stroke="black" stroke-width="30"></path>
+<path id="Vector 43" d="M1129.5 900H1315V200H1267.5" stroke="black" stroke-width="30"></path>
+<path id="Vector 44" d="M417 900L417 707L621 707" stroke="black" stroke-width="15"></path>
+<path id="Vector 45" d="M724 707L724 900" stroke="black" stroke-width="15"></path>
+<path id="Vector 46" d="M1137 715L1137 900" stroke="black" stroke-width="15"></path>
+<g id="Group 55">
+<path id="Vector 10" d="M1039.5 808C1090.5 808 1127 851.5 1127 899" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2" x="1032.5" y="809.5" width="6" height="89" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 61">
+<path id="Vector 10_2" d="M1224 627.5C1224 678.5 1180.5 715 1133 715" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_2" x="1222.5" y="620.5" width="6" height="89" transform="rotate(90 1222.5 620.5)" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 56">
+<path id="Vector 10_3" d="M325 696.5C325 645.5 368.5 609 416 609" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_3" x="326.5" y="703.5" width="6" height="89" transform="rotate(-90 326.5 703.5)" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 57">
+<path id="Vector 10_4" d="M513.5 520C462.5 520 426 563.5 426 611" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_4" x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 519 520)" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 60">
+<path id="Vector 10_5" d="M1116.5 520C1065.5 520 1029 563.5 1029 611" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_5" x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 1122 520)" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 58">
+<path id="Vector 10_6" d="M811.5 520C760.5 520 724 563.5 724 611" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_6" x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 817 520)" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 59">
+<path id="Vector 10_7" d="M629.5 799C680.5 799 717 755.5 717 708" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_7" x="1.5" y="-1.5" width="6" height="89" transform="matrix(1 8.74228e-08 8.74228e-08 -1 621 796)" stroke="black" stroke-width="3"></rect>
+</g>
+<path id="Vector 47" d="M417 610.5L417 202" stroke="black" stroke-width="15"></path>
+<path id="Vector 52" d="M822.5 611.5H1018V203.5" stroke="black" stroke-width="15"></path>
+<path id="Vector 48" d="M714 202L714 609L527 609" stroke="black" stroke-width="15"></path>
+<path id="Vector 49" d="M1127 608L1315 608" stroke="black" stroke-width="15"></path>
+<rect id="Rectangle 11" x="1267" width="200" height="200" transform="rotate(90 1267 0)" fill="#CBB7BB"></rect>
+<rect id="Rectangle 10" x="372" width="200" height="300" transform="rotate(90 372 0)" fill="#CBB7BB"></rect>
+</g>
+</svg><svg width="580" height="915" viewBox="0 0 580 915" fill="none" x="1300" y="0">
+<rect width="520" height="700" transform="matrix(1 0 0 -1 30 900)" fill="#92A8B2"></rect>
+<path d="M71 200H15V900H257" stroke="black" stroke-width="30"></path>
+<path d="M358 900H565V200H502" stroke="black" stroke-width="30"></path>
+<path d="M366 699V596H564.5" stroke="black" stroke-width="15"></path>
+<path d="M365 798L365 900" stroke="black" stroke-width="15"></path>
+<path d="M15 791L252 791" stroke="black" stroke-width="15"></path>
+<path d="M250 695V900" stroke="black" stroke-width="15"></path>
+<path d="M267.964 802C318.746 802 355.09 845.5 355.09 893" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="261" y="803.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M268.964 609C319.746 609 356.09 652.5 356.09 700" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="262" y="610.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M455.107 710.5C455.107 761.5 411.793 798 364.496 798" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="453.607" y="703.5" width="6" height="88.6074" transform="rotate(90 453.607 703.5)" stroke="black" stroke-width="3"></rect>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" fill="#A9BCC4"></path>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" stroke="black"></path>
+</svg><svg width="580" height="915" viewBox="0 0 580 915" fill="none" x="1850" y="0">
+<rect width="520" height="700" transform="matrix(1 0 0 -1 30 900)" fill="#92A8B2"></rect>
+<path d="M71 200H15V900H257" stroke="black" stroke-width="30"></path>
+<path d="M358 900H565V200H502" stroke="black" stroke-width="30"></path>
+<path d="M366 699V596H564.5" stroke="black" stroke-width="15"></path>
+<path d="M365 798L365 900" stroke="black" stroke-width="15"></path>
+<path d="M15 791L252 791" stroke="black" stroke-width="15"></path>
+<path d="M250 695V900" stroke="black" stroke-width="15"></path>
+<path d="M267.964 802C318.746 802 355.09 845.5 355.09 893" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="261" y="803.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M268.964 609C319.746 609 356.09 652.5 356.09 700" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="262" y="610.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M455.107 710.5C455.107 761.5 411.793 798 364.496 798" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="453.607" y="703.5" width="6" height="88.6074" transform="rotate(90 453.607 703.5)" stroke="black" stroke-width="3"></rect>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" fill="#A9BCC4"></path>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" stroke="black"></path>
+</svg><svg width="580" height="915" viewBox="0 0 580 915" fill="none" x="2400" y="0">
+<rect width="520" height="700" transform="matrix(1 0 0 -1 30 900)" fill="#92A8B2"></rect>
+<path d="M71 200H15V900H257" stroke="black" stroke-width="30"></path>
+<path d="M358 900H565V200H502" stroke="black" stroke-width="30"></path>
+<path d="M366 699V596H564.5" stroke="black" stroke-width="15"></path>
+<path d="M365 798L365 900" stroke="black" stroke-width="15"></path>
+<path d="M15 791L252 791" stroke="black" stroke-width="15"></path>
+<path d="M250 695V900" stroke="black" stroke-width="15"></path>
+<path d="M267.964 802C318.746 802 355.09 845.5 355.09 893" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="261" y="803.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M268.964 609C319.746 609 356.09 652.5 356.09 700" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="262" y="610.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M455.107 710.5C455.107 761.5 411.793 798 364.496 798" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="453.607" y="703.5" width="6" height="88.6074" transform="rotate(90 453.607 703.5)" stroke="black" stroke-width="3"></rect>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" fill="#A9BCC4"></path>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" stroke="black"></path>
+</svg><svg width="1330" height="915" viewBox="0 0 1330 915" fill="none" x="2950" y="0">
+<g id="3 bed_91/False">
+<rect id="Rectangle 7" width="1300" height="700" transform="matrix(1 0 0 -1 15 900)" fill="#B99DA4"></rect>
+<path id="Vector 40" d="M1029 900H15C15 900 15 473.367 15 200L72.5 200" stroke="black" stroke-width="30"></path>
+<path id="Vector 41" d="M372 200H416.5H462" stroke="black" stroke-width="30"></path>
+<path id="Vector 50" d="M976 200H1021.5H1067" stroke="black" stroke-width="30"></path>
+<path id="Vector 42" d="M668 200H713.5H759" stroke="black" stroke-width="30"></path>
+<path id="Vector 43" d="M1129.5 900H1315V200H1267.5" stroke="black" stroke-width="30"></path>
+<path id="Vector 44" d="M417 900L417 707L621 707" stroke="black" stroke-width="15"></path>
+<path id="Vector 45" d="M724 707L724 900" stroke="black" stroke-width="15"></path>
+<path id="Vector 46" d="M1137 715L1137 900" stroke="black" stroke-width="15"></path>
+<g id="Group 55">
+<path id="Vector 10" d="M1039.5 808C1090.5 808 1127 851.5 1127 899" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2" x="1032.5" y="809.5" width="6" height="89" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 61">
+<path id="Vector 10_2" d="M1224 627.5C1224 678.5 1180.5 715 1133 715" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_2" x="1222.5" y="620.5" width="6" height="89" transform="rotate(90 1222.5 620.5)" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 56">
+<path id="Vector 10_3" d="M325 696.5C325 645.5 368.5 609 416 609" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_3" x="326.5" y="703.5" width="6" height="89" transform="rotate(-90 326.5 703.5)" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 57">
+<path id="Vector 10_4" d="M513.5 520C462.5 520 426 563.5 426 611" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_4" x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 519 520)" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 60">
+<path id="Vector 10_5" d="M1116.5 520C1065.5 520 1029 563.5 1029 611" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_5" x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 1122 520)" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 58">
+<path id="Vector 10_6" d="M811.5 520C760.5 520 724 563.5 724 611" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_6" x="-1.5" y="1.5" width="6" height="89" transform="matrix(-1 0 0 1 817 520)" stroke="black" stroke-width="3"></rect>
+</g>
+<g id="Group 59">
+<path id="Vector 10_7" d="M629.5 799C680.5 799 717 755.5 717 708" stroke="black" stroke-dasharray="2 2"></path>
+<rect id="Rectangle 2_7" x="1.5" y="-1.5" width="6" height="89" transform="matrix(1 8.74228e-08 8.74228e-08 -1 621 796)" stroke="black" stroke-width="3"></rect>
+</g>
+<path id="Vector 47" d="M417 610.5L417 202" stroke="black" stroke-width="15"></path>
+<path id="Vector 52" d="M822.5 611.5H1018V203.5" stroke="black" stroke-width="15"></path>
+<path id="Vector 48" d="M714 202L714 609L527 609" stroke="black" stroke-width="15"></path>
+<path id="Vector 49" d="M1127 608L1315 608" stroke="black" stroke-width="15"></path>
+<rect id="Rectangle 11" x="1267" width="200" height="200" transform="rotate(90 1267 0)" fill="#CBB7BB"></rect>
+<rect id="Rectangle 10" x="372" width="200" height="300" transform="rotate(90 372 0)" fill="#CBB7BB"></rect>
+</g>
+</svg><svg width="775" height="915" viewBox="0 0 775 915" fill="none" x="5480" y="0">
+<rect width="715" height="700" transform="matrix(1 0 0 -1 30 900)" fill="#77AEB1"></rect>
+<path d="M308.5 900H15C15 900 15 473.367 15 200H73" stroke="black" stroke-width="30"></path>
+<path d="M370 200H415.306H460.612" stroke="black" stroke-width="30"></path>
+<path d="M16.9873 791H302.763" stroke="black" stroke-width="15"></path>
+<path d="M302.763 695V900" stroke="black" stroke-width="15"></path>
+<path d="M325.167 808C375.949 808 412.294 851.5 412.294 899" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="318.203" y="809.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M320.188 609C370.97 609 407.314 652.5 407.314 700" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="313.224" y="610.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M511.368 609C460.586 609 424.242 652.5 424.242 700" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="-1.5" y="1.5" width="5.96159" height="89" transform="matrix(-1 0 0 1 516.832 609)" stroke="black" stroke-width="3"></rect>
+<path d="M415.28 701L415.28 202" stroke="black" stroke-width="15"></path>
+<rect x="323" width="200" height="250" transform="rotate(90 323 0)" fill="#9AC3C5"></rect>
+<path d="M418 900H760V200H698.991" stroke="black" stroke-width="30"></path>
+<path d="M757.716 596H572.509V690.5H524" stroke="black" stroke-width="15"></path>
+<path d="M572.51 798L572.51 900" stroke="black" stroke-width="15"></path>
+<path d="M661.13 710.5C661.13 761.5 617.816 798 570.518 798" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="659.63" y="703.5" width="6" height="88.6074" transform="rotate(90 659.63 703.5)" stroke="black" stroke-width="3"></rect>
+</svg><svg width="580" height="915" viewBox="0 0 580 915" fill="none" x="6225" y="0">
+<rect width="520" height="700" transform="matrix(1 0 0 -1 30 900)" fill="#92A8B2"></rect>
+<path d="M71 200H15V900H257" stroke="black" stroke-width="30"></path>
+<path d="M358 900H565V200H502" stroke="black" stroke-width="30"></path>
+<path d="M366 699V596H564.5" stroke="black" stroke-width="15"></path>
+<path d="M365 798L365 900" stroke="black" stroke-width="15"></path>
+<path d="M15 791L252 791" stroke="black" stroke-width="15"></path>
+<path d="M250 695V900" stroke="black" stroke-width="15"></path>
+<path d="M267.964 802C318.746 802 355.09 845.5 355.09 893" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="261" y="803.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M268.964 609C319.746 609 356.09 652.5 356.09 700" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="262" y="610.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M455.107 710.5C455.107 761.5 411.793 798 364.496 798" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="453.607" y="703.5" width="6" height="88.6074" transform="rotate(90 453.607 703.5)" stroke="black" stroke-width="3"></rect>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" fill="#A9BCC4"></path>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" stroke="black"></path>
+</svg><svg width="580" height="915" viewBox="0 0 580 915" fill="none" x="6775" y="0">
+<rect width="520" height="700" transform="matrix(1 0 0 -1 30 900)" fill="#92A8B2"></rect>
+<path d="M71 200H15V900H257" stroke="black" stroke-width="30"></path>
+<path d="M358 900H565V200H502" stroke="black" stroke-width="30"></path>
+<path d="M366 699V596H564.5" stroke="black" stroke-width="15"></path>
+<path d="M365 798L365 900" stroke="black" stroke-width="15"></path>
+<path d="M15 791L252 791" stroke="black" stroke-width="15"></path>
+<path d="M250 695V900" stroke="black" stroke-width="15"></path>
+<path d="M267.964 802C318.746 802 355.09 845.5 355.09 893" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="261" y="803.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M268.964 609C319.746 609 356.09 652.5 356.09 700" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="262" y="610.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M455.107 710.5C455.107 761.5 411.793 798 364.496 798" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="453.607" y="703.5" width="6" height="88.6074" transform="rotate(90 453.607 703.5)" stroke="black" stroke-width="3"></rect>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" fill="#A9BCC4"></path>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" stroke="black"></path>
+</svg><svg width="580" height="915" viewBox="0 0 580 915" fill="none" x="7325" y="0">
+<rect width="520" height="700" transform="matrix(1 0 0 -1 30 900)" fill="#92A8B2"></rect>
+<path d="M71 200H15V900H257" stroke="black" stroke-width="30"></path>
+<path d="M358 900H565V200H502" stroke="black" stroke-width="30"></path>
+<path d="M366 699V596H564.5" stroke="black" stroke-width="15"></path>
+<path d="M365 798L365 900" stroke="black" stroke-width="15"></path>
+<path d="M15 791L252 791" stroke="black" stroke-width="15"></path>
+<path d="M250 695V900" stroke="black" stroke-width="15"></path>
+<path d="M267.964 802C318.746 802 355.09 845.5 355.09 893" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="261" y="803.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M268.964 609C319.746 609 356.09 652.5 356.09 700" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="262" y="610.5" width="5.96159" height="89" stroke="black" stroke-width="3"></rect>
+<path d="M455.107 710.5C455.107 761.5 411.793 798 364.496 798" stroke="black" stroke-dasharray="2 2"></path>
+<rect x="453.607" y="703.5" width="6" height="88.6074" transform="rotate(90 453.607 703.5)" stroke="black" stroke-width="3"></rect>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" fill="#A9BCC4"></path>
+<path d="M321 -1.08197e-05L321 200L71 200L71 -1.08194e-07L321 -1.08197e-05Z" stroke="black"></path>
+</svg></svg>

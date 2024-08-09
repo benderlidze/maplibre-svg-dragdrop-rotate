@@ -2,15 +2,16 @@
 import * as React from "react";
 import Map from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { CustomPolygon } from "@/components/CustomPolygon";
+import {
+  CustomPolygon,
+  FeaturePolygonWithProps,
+} from "@/components/CustomPolygon";
 import { DragEventHandler, useRef } from "react";
 import { createPolygonAtAPoint } from "@/tools/createPolygonAtAPoint";
 import { MeasureTool } from "./MeasureTool";
 
 export const MapContainer = () => {
-  const [polygons, setPolygons] = React.useState<
-    GeoJSON.Feature<GeoJSON.Polygon>[]
-  >([]);
+  const [polygons, setPolygons] = React.useState<FeaturePolygonWithProps[]>([]);
 
   const mapRef = useRef(null);
   const handleDrop: DragEventHandler = (e) => {
@@ -24,6 +25,7 @@ export const MapContainer = () => {
     const { lat, lng } = point;
 
     const polygonFeature = createPolygonAtAPoint({
+      svgLink: "",
       lat,
       lng,
       width: 43.3,
@@ -38,7 +40,14 @@ export const MapContainer = () => {
     e.preventDefault();
   };
 
-  console.log(JSON.stringify(polygons));
+  const handleMapClick = (e: maplibregl.MapMouseEvent) => {
+    if (!mapRef.current) return;
+    const map = mapRef.current as maplibregl.Map;
+    const features = map.queryRenderedFeatures(e.point);
+    console.log("features", features);
+  };
+
+  console.log(polygons);
 
   return (
     <div
@@ -54,23 +63,24 @@ export const MapContainer = () => {
           zoom: 19,
         }}
         mapStyle="https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json"
+        onClick={handleMapClick}
       >
-        {polygons.map((polygon, index: number) => (
+        {polygons.map((polygon) => (
           <CustomPolygon
-            key={index}
+            key={polygon.properties.id} // Use the unique id as the key
             geojson={polygon}
             onDelete={() => {
               setPolygons((prev) => {
-                console.log("prev", prev);
-                return prev.filter(
-                  (poly) => poly.properties.id !== polygon.properties.id
+                const newPolygons = prev.filter(
+                  (p) => p.properties.id !== polygon.properties.id
                 );
+                return newPolygons;
               });
             }}
-            label={polygon.properties.id}
+            id={polygon.properties.id}
+            label={"1 storey" + polygon.properties.id}
           />
         ))}
-
         <MeasureTool />
       </Map>
     </div>

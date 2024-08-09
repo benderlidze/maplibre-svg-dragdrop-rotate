@@ -12,13 +12,22 @@ import {
   distance,
 } from "@turf/turf";
 
+export type FeaturePolygonWithProps = GeoJSON.Feature & {
+  geometry: GeoJSON.Polygon;
+  properties: {
+    id: number;
+  };
+};
+
 type CustomPolygonProps = {
+  id: number;
   geojson: GeoJSON.Feature;
   label: string;
   onDelete: () => void;
 };
 
 export const CustomPolygon = ({
+  id,
   geojson,
   label,
   onDelete,
@@ -103,7 +112,7 @@ export const CustomPolygon = ({
   };
 
   return (
-    <div>
+    <div className="border border-blue-800 ">
       <Source type="geojson" data={rotatedData}>
         <Layer
           type="fill"
