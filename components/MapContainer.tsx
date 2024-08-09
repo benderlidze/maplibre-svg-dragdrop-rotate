@@ -23,7 +23,6 @@ export const MapContainer = () => {
     const point = map.unproject([layerX, layerY]);
     const { lat, lng } = point;
 
-    // Example usage
     const polygonFeature = createPolygonAtAPoint({
       lat,
       lng,
@@ -31,6 +30,7 @@ export const MapContainer = () => {
       height: 20.3,
     });
 
+    console.log("polygonFeature==>", polygonFeature);
     setPolygons((prev) => [...prev, polygonFeature]);
   };
 
@@ -56,7 +56,19 @@ export const MapContainer = () => {
         mapStyle="https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json"
       >
         {polygons.map((polygon, index: number) => (
-          <CustomPolygon key={index} geojson={polygon} />
+          <CustomPolygon
+            key={index}
+            geojson={polygon}
+            onDelete={() => {
+              setPolygons((prev) => {
+                console.log("prev", prev);
+                return prev.filter(
+                  (poly) => poly.properties.id !== polygon.properties.id
+                );
+              });
+            }}
+            label={polygon.properties.id}
+          />
         ))}
 
         <MeasureTool />

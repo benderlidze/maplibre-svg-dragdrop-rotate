@@ -14,9 +14,15 @@ import {
 
 type CustomPolygonProps = {
   geojson: GeoJSON.Feature;
+  label: string;
+  onDelete: () => void;
 };
 
-export const CustomPolygon = ({ geojson }: CustomPolygonProps) => {
+export const CustomPolygon = ({
+  geojson,
+  label,
+  onDelete,
+}: CustomPolygonProps) => {
   const initialData = {
     type: "FeatureCollection",
     features: [geojson],
@@ -184,6 +190,39 @@ export const CustomPolygon = ({ geojson }: CustomPolygonProps) => {
       </Marker>
 
       <Marker
+        offset={[0, 200]}
+        longitude={polygonCenter[0]}
+        latitude={polygonCenter[1]}
+      >
+        <div
+          style={{
+            borderRadius: "20px",
+            backgroundColor: "gray",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            opacity: 1,
+            border: "2px solid gray",
+            padding: "5px 10px",
+            gap: 10,
+            color: "white",
+          }}
+        >
+          ID {label}
+          <img
+            src="/delete-2-svgrepo-com.svg"
+            alt="Rotate"
+            style={{
+              width: "20px",
+              cursor: "pointer",
+              filter: "brightness(0) invert(1)",
+            }}
+            onClick={onDelete}
+          />
+        </div>
+      </Marker>
+
+      <Marker
         longitude={markerPosition[0]}
         latitude={markerPosition[1]}
         draggable
@@ -196,7 +235,6 @@ export const CustomPolygon = ({ geojson }: CustomPolygonProps) => {
             height: 40,
             borderRadius: "50%",
             display: "flex",
-            opacity: 0,
           }}
         ></div>
       </Marker>

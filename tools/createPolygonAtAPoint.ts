@@ -46,9 +46,9 @@ export const createPolygonAtAPoint = ({
     topLeft.geometry.coordinates,
   ];
 
-  const polygon = turf.polygon([
-    polygonCoords,
-  ]) as GeoJSON.Feature<GeoJSON.Polygon>;
+  const polygon = turf.polygon([polygonCoords], {
+    id: new Date().getTime(),
+  }) as GeoJSON.Feature<GeoJSON.Polygon>;
 
   return polygon;
 };
