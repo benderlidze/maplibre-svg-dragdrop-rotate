@@ -29,7 +29,11 @@ export const MapContainer = () => {
     const imageFile = e.dataTransfer.files[0];
     const imageName = imageFile.name.replace(/\.[^/.]+$/, "");
     const dimensions = flats[imageName];
-    console.log("dimensions", dimensions);
+
+    if (!dimensions) {
+      console.error("Image dimensions not found" + imageName);
+      return;
+    }
 
     const reader = new FileReader();
     reader.onload = (event) => {

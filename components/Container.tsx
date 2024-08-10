@@ -11,8 +11,20 @@ export const Container = ({}) => {
           <img src="svg/selected/F_D_2_9_0_0_0_0.svg" />
         </div>
         <div>
-          <img src="/svg.svg" />
+          <img src="svg/selected/F_S_2_6_0_1_0_0.svg" />
         </div>
+        <div>
+          <img src="svg/selected/F_S_2_6_1_0_2_0.svg" />
+        </div>
+        <div>
+          <img src="svg/selected/F_S_2_7_0_2_0_0.svg" />
+        </div>
+        <div>
+          <img src="svg/selected/F_S_2_9_0_0_0_0.svg" />
+        </div>
+        {/* <div>
+          <img src="/svg.svg" />
+        </div> */}
       </div>
       <div className="w-4/6  h-full">
         <MapContainer />
