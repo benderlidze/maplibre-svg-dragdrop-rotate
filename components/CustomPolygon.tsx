@@ -16,11 +16,13 @@ export type FeaturePolygonWithProps = GeoJSON.Feature & {
   geometry: GeoJSON.Polygon;
   properties: {
     id: number;
+    imageLink: string;
   };
 };
 
 type CustomPolygonProps = {
   id: number;
+  image: string;
   geojson: GeoJSON.Feature;
   label: string;
   onDelete: () => void;
@@ -28,6 +30,7 @@ type CustomPolygonProps = {
 
 export const CustomPolygon = ({
   id,
+  image,
   geojson,
   label,
   onDelete,
@@ -111,6 +114,8 @@ export const CustomPolygon = ({
     );
   };
 
+  console.log("image", image);
+
   return (
     <div className="border border-blue-800 ">
       <Source type="geojson" data={rotatedData}>
@@ -123,7 +128,7 @@ export const CustomPolygon = ({
         />
       </Source>
 
-      <Source type="image" url="/svg.png" coordinates={imageCoordinates}>
+      <Source type="image" url={image} coordinates={imageCoordinates}>
         <Layer
           type="raster"
           paint={{

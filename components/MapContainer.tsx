@@ -10,30 +10,63 @@ import { DragEventHandler, useRef } from "react";
 import { createPolygonAtAPoint } from "@/tools/createPolygonAtAPoint";
 import { MeasureTool } from "./MeasureTool";
 
+type PolygonObj = {
+  feature: FeaturePolygonWithProps;
+  image: string;
+};
+
 export const MapContainer = () => {
-  const [polygons, setPolygons] = React.useState<FeaturePolygonWithProps[]>([]);
+  const [polygons, setPolygons] = React.useState<PolygonObj[]>([]);
 
   const mapRef = useRef(null);
   const handleDrop: DragEventHandler = (e) => {
     if (!mapRef || !mapRef.current) return;
     e.preventDefault();
-    const { layerX, layerY } = e.nativeEvent;
-    console.log("e", e);
+
     const map = mapRef.current as maplibregl.Map;
 
-    const point = map.unproject([layerX, layerY]);
-    const { lat, lng } = point;
+    const imageFile = e.dataTransfer.files[0];
+    const imageName = imageFile.name;
 
-    const polygonFeature = createPolygonAtAPoint({
-      svgLink: "",
-      lat,
-      lng,
-      width: 43.3,
-      height: 20.3,
-    });
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const svg = event.target?.result as string;
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext("2d");
+        if (ctx) {
+          ctx.drawImage(img, 0, 0);
+          const pngBase64 = canvas.toDataURL("image/png");
+          console.log(pngBase64);
 
-    console.log("polygonFeature==>", polygonFeature);
-    setPolygons((prev) => [...prev, polygonFeature]);
+          const { layerX, layerY } = e.nativeEvent;
+
+          const point = map.unproject([layerX, layerY]);
+          const { lat, lng } = point;
+
+          const polygonFeature = createPolygonAtAPoint({
+            lat,
+            lng,
+            width: 43.3,
+            height: 20.3,
+          });
+
+          console.log("polygonFeature==>", polygonFeature);
+          setPolygons((prev) => [
+            ...prev,
+            {
+              feature: polygonFeature,
+              image: pngBase64,
+            },
+          ]);
+        }
+      };
+      img.src = svg;
+    };
+    reader.readAsDataURL(imageFile);
   };
 
   const handleDragOver: DragEventHandler = (e) => {
@@ -46,8 +79,6 @@ export const MapContainer = () => {
     const features = map.queryRenderedFeatures(e.point);
     console.log("features", features);
   };
-
-  console.log(polygons);
 
   return (
     <div
@@ -67,18 +98,20 @@ export const MapContainer = () => {
       >
         {polygons.map((polygon) => (
           <CustomPolygon
-            key={polygon.properties.id} // Use the unique id as the key
-            geojson={polygon}
+            image={polygon.image}
+            id={polygon.feature.properties.id}
+            label={"1 storey" + polygon.feature.properties.id}
+            key={polygon.feature.properties.id} // Use the unique id as the key
+            geojson={polygon.feature}
             onDelete={() => {
               setPolygons((prev) => {
                 const newPolygons = prev.filter(
-                  (p) => p.properties.id !== polygon.properties.id
+                  (p) =>
+                    p.feature.properties.id !== polygon.feature.properties.id
                 );
                 return newPolygons;
               });
             }}
-            id={polygon.properties.id}
-            label={"1 storey" + polygon.properties.id}
           />
         ))}
         <MeasureTool />

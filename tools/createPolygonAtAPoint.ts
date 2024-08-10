@@ -2,7 +2,6 @@ import { FeaturePolygonWithProps } from "@/components/CustomPolygon";
 import * as turf from "@turf/turf";
 
 type PolygonOptions = {
-  svgLink: string;
   lat: number;
   lng: number;
   width: number;
@@ -10,7 +9,6 @@ type PolygonOptions = {
 };
 
 export const createPolygonAtAPoint = ({
-  svgLink,
   lat,
   lng,
   width,
