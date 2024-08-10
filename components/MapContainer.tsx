@@ -9,6 +9,7 @@ import {
 import { DragEventHandler, useRef } from "react";
 import { createPolygonAtAPoint } from "@/tools/createPolygonAtAPoint";
 import { MeasureTool } from "./MeasureTool";
+import { flats } from "@/types/blocktypes";
 
 type PolygonObj = {
   feature: FeaturePolygonWithProps;
@@ -26,7 +27,9 @@ export const MapContainer = () => {
     const map = mapRef.current as maplibregl.Map;
 
     const imageFile = e.dataTransfer.files[0];
-    const imageName = imageFile.name;
+    const imageName = imageFile.name.replace(/\.[^/.]+$/, "");
+    const dimensions = flats[imageName];
+    console.log("dimensions", dimensions);
 
     const reader = new FileReader();
     reader.onload = (event) => {
@@ -34,13 +37,13 @@ export const MapContainer = () => {
       const img = new Image();
       img.onload = () => {
         const canvas = document.createElement("canvas");
-        canvas.width = img.width;
-        canvas.height = img.height;
+        canvas.width = dimensions.imageWidth;
+        canvas.height = dimensions.imageHeight;
+
         const ctx = canvas.getContext("2d");
         if (ctx) {
           ctx.drawImage(img, 0, 0);
           const pngBase64 = canvas.toDataURL("image/png");
-          console.log(pngBase64);
 
           const { layerX, layerY } = e.nativeEvent;
 
@@ -50,8 +53,8 @@ export const MapContainer = () => {
           const polygonFeature = createPolygonAtAPoint({
             lat,
             lng,
-            width: 43.3,
-            height: 20.3,
+            width: dimensions.imageWidth / 100,
+            height: dimensions.imageHeight / 100,
           });
 
           console.log("polygonFeature==>", polygonFeature);
