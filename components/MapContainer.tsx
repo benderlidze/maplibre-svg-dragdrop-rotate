@@ -14,6 +14,7 @@ import { flats } from "@/types/blocktypes";
 type PolygonObj = {
   feature: FeaturePolygonWithProps;
   image: string;
+  active: boolean;
 };
 
 export const MapContainer = () => {
@@ -25,7 +26,6 @@ export const MapContainer = () => {
     e.preventDefault();
 
     const map = mapRef.current as maplibregl.Map;
-
     const imageFile = e.dataTransfer.files[0];
     const imageName = imageFile.name.replace(/\.[^/.]+$/, "");
     const dimensions = flats[imageName];
@@ -67,6 +67,7 @@ export const MapContainer = () => {
             {
               feature: polygonFeature,
               image: pngBase64,
+              active: false,
             },
           ]);
         }
@@ -85,7 +86,38 @@ export const MapContainer = () => {
     const map = mapRef.current as maplibregl.Map;
     const features = map.queryRenderedFeatures(e.point);
     console.log("features", features);
+
+    if (
+      features.length > 0 &&
+      features[0].properties?.type === "FeaturePolygonWithProps"
+    ) {
+      const id = features[0].properties.id;
+      const newPolygons = polygons.map((polygon) => {
+        if (polygon.feature.properties.id === id) {
+          return {
+            ...polygon,
+            active: true,
+          };
+        }
+        return {
+          ...polygon,
+          active: false,
+        };
+      });
+      setPolygons(newPolygons);
+    }
+
+    if (features.length === 0) {
+      setPolygons((prev) =>
+        prev.map((polygon) => ({
+          ...polygon,
+          active: false,
+        }))
+      );
+    }
   };
+
+  console.log("polygons", polygons);
 
   return (
     <div
@@ -105,19 +137,19 @@ export const MapContainer = () => {
       >
         {polygons.map((polygon) => (
           <CustomPolygon
+            active={polygon.active}
             image={polygon.image}
             id={polygon.feature.properties.id}
             label={"1 storey" + polygon.feature.properties.id}
             key={polygon.feature.properties.id} // Use the unique id as the key
             geojson={polygon.feature}
             onDelete={() => {
-              setPolygons((prev) => {
-                const newPolygons = prev.filter(
+              setPolygons((prev) =>
+                prev.filter(
                   (p) =>
                     p.feature.properties.id !== polygon.feature.properties.id
-                );
-                return newPolygons;
-              });
+                )
+              );
             }}
           />
         ))}

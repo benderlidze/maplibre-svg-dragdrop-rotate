@@ -49,6 +49,7 @@ export const createPolygonAtAPoint = ({
 
   const polygon = turf.polygon([polygonCoords], {
     id: new Date().getTime(),
+    type: "FeaturePolygonWithProps",
   });
 
   return polygon as FeaturePolygonWithProps;

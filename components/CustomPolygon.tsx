@@ -17,6 +17,7 @@ export type FeaturePolygonWithProps = GeoJSON.Feature & {
   properties: {
     id: number;
     imageLink: string;
+    type: string;
   };
 };
 
@@ -25,6 +26,7 @@ type CustomPolygonProps = {
   image: string;
   geojson: GeoJSON.Feature;
   label: string;
+  active: boolean;
   onDelete: () => void;
 };
 
@@ -33,6 +35,7 @@ export const CustomPolygon = ({
   image,
   geojson,
   label,
+  active,
   onDelete,
 }: CustomPolygonProps) => {
   const initialData = {
@@ -114,10 +117,10 @@ export const CustomPolygon = ({
     );
   };
 
-  console.log("image", image);
+  console.log("active", active);
 
   return (
-    <div className="border border-blue-800 ">
+    <div className="border border-blue-800">
       <Source type="geojson" data={rotatedData}>
         <Layer
           type="fill"
@@ -138,120 +141,123 @@ export const CustomPolygon = ({
         />
       </Source>
 
-      <Source type="geojson" data={lineData}>
-        <Layer
-          type="line"
-          paint={{
-            "line-color": "gray",
-            "line-width": 2,
-            "line-dasharray": [2, 2],
-          }}
-        />
-      </Source>
+      {active && (
+        <>
+          <Source type="geojson" data={lineData}>
+            <Layer
+              type="line"
+              paint={{
+                "line-color": "gray",
+                "line-width": 2,
+                "line-dasharray": [2, 2],
+              }}
+            />
+          </Source>
+          <Marker
+            longitude={polygonCenter[0]}
+            latitude={polygonCenter[1]}
+            draggable
+            onDrag={handlePolygonDrag}
+            onDragEnd={updateImageLayer}
+          >
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: "50%",
+                backgroundColor: "white",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "white",
+                fontWeight: "bold",
+                opacity: 1,
+                border: "2px solid gray",
+              }}
+            >
+              <img
+                src="/move-alt-svgrepo-com.png"
+                alt="Move"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>
+          </Marker>
 
-      <Marker
-        longitude={polygonCenter[0]}
-        latitude={polygonCenter[1]}
-        draggable
-        onDrag={handlePolygonDrag}
-        onDragEnd={updateImageLayer}
-      >
-        <div
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: "50%",
-            backgroundColor: "white",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "white",
-            fontWeight: "bold",
-            opacity: 1,
-            border: "2px solid gray",
-          }}
-        >
-          <img
-            src="/move-alt-svgrepo-com.png"
-            alt="Move"
-            style={{ width: "100%", height: "100%" }}
-          />
-        </div>
-      </Marker>
+          <Marker longitude={markerPosition[0]} latitude={markerPosition[1]}>
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: "50%",
+                backgroundColor: "white",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "white",
+                fontWeight: "bold",
+                opacity: 1,
+                border: "2px solid gray",
+              }}
+            >
+              <img
+                src="/rotate-svgrepo-com.png"
+                alt="Rotate"
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>
+          </Marker>
 
-      <Marker longitude={markerPosition[0]} latitude={markerPosition[1]}>
-        <div
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: "50%",
-            backgroundColor: "white",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "white",
-            fontWeight: "bold",
-            opacity: 1,
-            border: "2px solid gray",
-          }}
-        >
-          <img
-            src="/rotate-svgrepo-com.png"
-            alt="Rotate"
-            style={{ width: "100%", height: "100%" }}
-          />
-        </div>
-      </Marker>
+          <Marker
+            offset={[0, 200]}
+            longitude={polygonCenter[0]}
+            latitude={polygonCenter[1]}
+          >
+            <div
+              style={{
+                borderRadius: "20px",
+                backgroundColor: "gray",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                opacity: 1,
+                border: "2px solid gray",
+                padding: "5px 10px",
+                gap: 10,
+                color: "white",
+              }}
+            >
+              ID {label}
+              <img
+                src="/delete-2-svgrepo-com.svg"
+                alt="Rotate"
+                style={{
+                  width: "20px",
+                  cursor: "pointer",
+                  filter: "brightness(0) invert(1)",
+                }}
+                onClick={onDelete}
+              />
+            </div>
+          </Marker>
 
-      <Marker
-        offset={[0, 200]}
-        longitude={polygonCenter[0]}
-        latitude={polygonCenter[1]}
-      >
-        <div
-          style={{
-            borderRadius: "20px",
-            backgroundColor: "gray",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            opacity: 1,
-            border: "2px solid gray",
-            padding: "5px 10px",
-            gap: 10,
-            color: "white",
-          }}
-        >
-          ID {label}
-          <img
-            src="/delete-2-svgrepo-com.svg"
-            alt="Rotate"
-            style={{
-              width: "20px",
-              cursor: "pointer",
-              filter: "brightness(0) invert(1)",
-            }}
-            onClick={onDelete}
-          />
-        </div>
-      </Marker>
-
-      <Marker
-        longitude={markerPosition[0]}
-        latitude={markerPosition[1]}
-        draggable
-        onDrag={handleMarkerDrag}
-        onDragEnd={updateImageLayer}
-      >
-        <div
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: "50%",
-            display: "flex",
-          }}
-        ></div>
-      </Marker>
+          <Marker
+            longitude={markerPosition[0]}
+            latitude={markerPosition[1]}
+            draggable
+            onDrag={handleMarkerDrag}
+            onDragEnd={updateImageLayer}
+          >
+            <div
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: "50%",
+                display: "flex",
+              }}
+            ></div>
+          </Marker>
+        </>
+      )}
     </div>
   );
 };
