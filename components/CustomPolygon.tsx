@@ -136,7 +136,7 @@ export const CustomPolygon = ({
           type="raster"
           paint={{
             "raster-fade-duration": 0,
-            "raster-opacity": 1,
+            "raster-opacity": active ? 1 : 0.5,
           }}
         />
       </Source>

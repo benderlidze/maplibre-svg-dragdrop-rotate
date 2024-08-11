@@ -6,7 +6,7 @@ import {
   CustomPolygon,
   FeaturePolygonWithProps,
 } from "@/components/CustomPolygon";
-import { DragEventHandler, useRef } from "react";
+import { DragEventHandler, useEffect, useRef } from "react";
 import { createPolygonAtAPoint } from "@/tools/createPolygonAtAPoint";
 import { MeasureTool } from "./MeasureTool";
 import { flats } from "@/types/blocktypes";
@@ -21,6 +21,28 @@ export const MapContainer = () => {
   const [polygons, setPolygons] = React.useState<PolygonObj[]>([]);
 
   const mapRef = useRef(null);
+
+  //listen for delete button click
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Delete") {
+        const activePolygon = polygons.find((p) => p.active);
+        if (activePolygon) {
+          setPolygons((prev) =>
+            prev.filter(
+              (p) =>
+                p.feature.properties.id !== activePolygon.feature.properties.id
+            )
+          );
+        }
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [polygons]);
+
   const handleDrop: DragEventHandler = (e) => {
     if (!mapRef || !mapRef.current) return;
     e.preventDefault();
@@ -105,9 +127,8 @@ export const MapContainer = () => {
         };
       });
       setPolygons(newPolygons);
-    }
-
-    if (features.length === 0) {
+    } else {
+      //deselect all polygons
       setPolygons((prev) =>
         prev.map((polygon) => ({
           ...polygon,
@@ -116,8 +137,6 @@ export const MapContainer = () => {
       );
     }
   };
-
-  console.log("polygons", polygons);
 
   return (
     <div
