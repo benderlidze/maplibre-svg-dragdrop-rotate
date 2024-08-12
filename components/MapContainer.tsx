@@ -48,55 +48,66 @@ export const MapContainer = () => {
     e.preventDefault();
 
     const map = mapRef.current as maplibregl.Map;
-    const imageFile = e.dataTransfer.files[0];
-    const imageName = imageFile.name.replace(/\.[^/.]+$/, "");
-    const dimensions = flats[imageName];
+    const imageUrl = e.dataTransfer.getData("text/uri-list");
 
-    if (!dimensions) {
-      console.error("Image dimensions not found" + imageName);
+    if (!imageUrl) {
+      console.error("No image URL found in the dropped data");
       return;
     }
 
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const svg = event.target?.result as string;
-      const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = dimensions.imageWidth;
-        canvas.height = dimensions.imageHeight;
+    // Extract the image name from the URL
+    const imageName =
+      imageUrl
+        .split("/")
+        .pop()
+        ?.replace(/\.[^/.]+$/, "") || "";
+    const dimensions = flats[imageName];
 
-        const ctx = canvas.getContext("2d");
-        if (ctx) {
-          ctx.drawImage(img, 0, 0);
-          const pngBase64 = canvas.toDataURL("image/png");
+    if (!dimensions) {
+      console.error("Image dimensions not found for " + imageName);
+      return;
+    }
 
-          const { layerX, layerY } = e.nativeEvent;
+    // Load the image from the URL
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = dimensions.imageWidth;
+      canvas.height = dimensions.imageHeight;
 
-          const point = map.unproject([layerX, layerY]);
-          const { lat, lng } = point;
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        ctx.drawImage(img, 0, 0, dimensions.imageWidth, dimensions.imageHeight);
+        const pngBase64 = canvas.toDataURL("image/png");
 
-          const polygonFeature = createPolygonAtAPoint({
-            lat,
-            lng,
-            width: dimensions.imageWidth / 100,
-            height: dimensions.imageHeight / 100,
-          });
+        const { layerX, layerY } = e.nativeEvent;
 
-          console.log("polygonFeature==>", polygonFeature);
-          setPolygons((prev) => [
-            ...prev,
-            {
-              feature: polygonFeature,
-              image: pngBase64,
-              active: false,
-            },
-          ]);
-        }
-      };
-      img.src = svg;
+        const point = map.unproject([layerX, layerY]);
+        const { lat, lng } = point;
+
+        const polygonFeature = createPolygonAtAPoint({
+          lat,
+          lng,
+          width: dimensions.imageWidth / 100,
+          height: dimensions.imageHeight / 100,
+        });
+
+        console.log("polygonFeature==>", polygonFeature);
+        setPolygons((prev) => [
+          ...prev,
+          {
+            feature: polygonFeature,
+            image: pngBase64,
+            active: false,
+          },
+        ]);
+      }
     };
-    reader.readAsDataURL(imageFile);
+    img.onerror = () => {
+      console.error("Error loading image from URL:", imageUrl);
+    };
+    img.src = imageUrl;
   };
 
   const handleDragOver: DragEventHandler = (e) => {
